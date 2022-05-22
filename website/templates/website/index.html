@@ -13,9 +13,11 @@
                     increase revenue, and overall value to your business with a website that converts.
                     I’m giving away 100 free websites to celebrate my portfolio service launch. If you think you or your
                     friend needs it, click the "Get yours now" button</p>
-                <button class="cta">
-                    Get yours now
-                </button>
+                <a href="{% url 'offer' %}">
+                    <button class="cta">
+                        Get yours now
+                    </button>
+                </a>
             </div>
             <div class="right-col">
                 <img class="hero-img" src="{% static 'img/static website.svg' %}" alt="">
@@ -257,19 +259,27 @@
                 </div>
             </div>
             <div class="right-col">
-                <form action="">
+                <form action="" method="POST">
+                    {% csrf_token %}
                     <div class="form-elements">
                         <div class="half-form-element">
-                            <input class="form-control" type="text" placeholder=" First name">
+                            {{form.first_name}}
                         </div>
                         <div class="half-form-element">
-                            <input class="form-control" type="text" placeholder=" Last name">
+                            {{form.last_name}}
+                        </div>
+                    </div>
+                    <div class="form-elements">
+                        <div class="half-form-element">
+                            {{form.email}}
+                        </div>
+                        <div class="half-form-element">
+                            {{form.phone_number}}
                         </div>
                     </div>
                     <div class="form-elements">
                         <div class="full-form-element">
-                            <input class="form-control" type="text" placeholder="Email">
-                            <textarea class="form-control" rows="6" placeholder="Message"></textarea>
+                            {{form.message}}
                         </div>
                     </div>
                     <div class="form-elements">
