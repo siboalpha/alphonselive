@@ -105,7 +105,7 @@ img {
 /* LOGO */
 .logo {
     img {
-        height: 50px;
+        width: 170px;
     }
 }
 
@@ -975,11 +975,12 @@ form {
 
     .form-elements {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         width: 94%;
 
         .half-form-element {
-            width: 46%;
+            width: 100%;
         }
 
         .full-form-element {
@@ -987,6 +988,18 @@ form {
         }
     }
 }
+
+@media(min-width:540px) {
+    form {
+        .form-elements {
+            flex-direction: row;
+            .half-form-element {
+                width: 46%;
+            }
+        }
+    }
+}
+
 
 // Thank you page
 

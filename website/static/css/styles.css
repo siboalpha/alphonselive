@@ -123,7 +123,7 @@ img {
 
 /* LOGO */
 .logo img {
-  height: 50px;
+  width: 170px;
 }
 
 /* NAVBAR MENU */
@@ -1037,6 +1037,12 @@ form .form-elements .half-form-element {
 
 form .form-elements .full-form-element {
   width: 100%;
+}
+
+@media (min-width: 540px) {
+  form .form-elements .half-form-element {
+    width: 100%;
+  }
 }
 
 .thank-you {
