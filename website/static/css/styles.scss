@@ -1040,6 +1040,42 @@ form {
     }
 }
 
+.quotation{
+    .container {
+        padding-top: 150px;
+        .right-col {
+            form {
+                background-color: #f2f2f2;
+                padding: 20px;
+                border-radius: 5px
+            }
+            p{
+                font-size: smaller;
+                color:#181818;
+            }
+        }
+    }
+}
+
+@media(min-width:540px) {
+    .quotation {
+        .container {
+            padding-top: 200px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: flex-start;
+            .left-col {
+                width: 50%;
+            }
+            .right-col {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
 //COOKIES
   #cookiePopup {
     background-color: #ffffff;

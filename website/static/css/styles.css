@@ -1025,6 +1025,10 @@ form .form-elements {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1032,7 +1036,7 @@ form .form-elements {
 }
 
 form .form-elements .half-form-element {
-  width: 46%;
+  width: 100%;
 }
 
 form .form-elements .full-form-element {
@@ -1040,8 +1044,14 @@ form .form-elements .full-form-element {
 }
 
 @media (min-width: 540px) {
+  form .form-elements {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   form .form-elements .half-form-element {
-    width: 100%;
+    width: 46%;
   }
 }
 
@@ -1095,6 +1105,43 @@ form .form-elements .full-form-element {
 @media (min-width: 540px) {
   .thank-you .container {
     width: 540px;
+  }
+}
+
+.quotation .container {
+  padding-top: 150px;
+}
+
+.quotation .container .right-col form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.quotation .container .right-col p {
+  font-size: smaller;
+  color: #181818;
+}
+
+@media (min-width: 540px) {
+  .quotation .container {
+    padding-top: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 40px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .quotation .container .left-col {
+    width: 50%;
+  }
+  .quotation .container .right-col {
+    width: 50%;
   }
 }
 
