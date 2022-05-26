@@ -31,7 +31,7 @@ class Quotation(models.Model):
     advanced_website = 'Advanced Website'
 
     WEBSITE_TYPE_CHOICES = [
-        (basic_website, 'Web design'),
+        (basic_website, 'Basic Website'),
         (standard_website, 'Standard Website'),
         (advanced_website, 'Advanced Website'),
     ]
