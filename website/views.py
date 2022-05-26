@@ -1,6 +1,8 @@
 import email
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
+
+from website.models import Quotation
 from .forms import ContactForm, QuotationForm
 from django.core.mail import EmailMessage
 from core import settings
@@ -47,80 +49,57 @@ def quotation(request):
         if form.is_valid():
             website_category_input = form.cleaned_data['website_type']
             if website_category_input == 'Basic Website':
-                hosting = 60
-                domain_name = 20
-                web_design = 100
-                web_development = 200
-                seo = 0
-                technical_suport = 12
+                hosting_value = 60
+                domain_name_value = 12
+                web_design_value = 50
+                web_development_value = 200
+                seo_value = 0
+                technical_suport_value = 0
 
                 print (website_category_input)
                 if form.cleaned_data['hosting'] == 'Yes':
-                    hosting = 0
+                    hosting_value = 0
                 if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name = 0
+                    domain_name_value = 0
                 if form.cleaned_data['web_design'] == 'Yes':
-                    web_design = 0
+                    web_design_value = 0
                 if form.cleaned_data['web_development'] == 'Yes':
-                    web_development = 0
+                    web_development_value = 0
                 if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport = 0
+                    technical_suport_value = 12
                 if form.cleaned_data['seo'] == 'Yes':
-                    seo == 100
+                    seo_value = 100
 
-                total = hosting + domain_name + web_design + web_development + seo + technical_suport
-                print(total)
+                total = hosting_value + domain_name_value + web_design_value + web_development_value + seo_value + technical_suport_value
+                domain_name = form.save(commit=False)
+                domain_name.domain_name_value = domain_name_value
 
-            elif website_category_input == 'Standard Website':
-                hosting = 100
-                domain_name = 20
-                web_design = 300
-                web_development = 600
-                seo = 0
-                technical_suport = 0
+                hosting = form.save(commit=False)
+                hosting.hosting_value = hosting_value
 
-                print (website_category_input)
-                if form.cleaned_data['hosting'] == 'Yes':
-                    hosting = 0
-                if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name = 0
-                if form.cleaned_data['web_design'] == 'Yes':
-                    web_design = 0
-                if form.cleaned_data['web_development'] == 'Yes':
-                    web_development = 0
-                if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport = 50
-                if form.cleaned_data['seo'] == 'Yes':
-                    seo == 200
+                web_design = form.save(commit=False)
+                web_design.web_design_value = web_design_value
 
-                total = hosting + domain_name + web_design + web_development + seo + technical_suport
-                print(total)
+                web_development = form.save(commit=False)
+                web_development.web_development_value = web_development_value
 
-            elif website_category_input == 'Advanced Website':
-                hosting = 300
-                domain_name = 50
-                web_design = 500
-                web_development = 1600
-                seo = 0
-                technical_suport = 0
+                seo = form.save(commit=False)
+                seo.seo_value = seo_value
 
-                print (website_category_input)
-                if form.cleaned_data['hosting'] == 'Yes':
-                    hosting = 0
-                if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name = 0
-                if form.cleaned_data['web_design'] == 'Yes':
-                    web_design = 0
-                if form.cleaned_data['web_development'] == 'Yes':
-                    web_development = 0
-                if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport = 150
-                if form.cleaned_data['seo'] == 'Yes':
-                    seo == 300
-
-                total = hosting + domain_name + web_design + web_development + seo + technical_suport
-                print(total)
+                technical_suport = form.save(commit=False)
+                technical_suport.technical_suport_value = technical_suport_value
+                
+                form_total = form.save(commit=False)
+                form_total.quotation_total = total
+                form.save()
+                instance = form.save()
+                return redirect('quotation-results', pk=instance.pk)
             else: 
                 total = 0
 
     return render(request, 'website/quotation.html', context)
+
+def quotationResults(request, pk):
+    quotation = Quotation.objects.get(id=pk)
+    context = {'quotation': quotation}
+    return render(request, 'website/quotation-results.html', context)

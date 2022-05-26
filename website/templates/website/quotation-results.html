@@ -1,0 +1,160 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+<section class="proposal-title">
+    <div class="container">
+        <h1>Website Redesign Proposal</h1>
+        <p><span>Prepared for:</span>CLIENT NAME</p>
+        <p><span>Prepared by:</span>SIBOMANA Alphonse</p>
+    </div>
+</section>
+
+
+<section class="assessment">
+    <div class="container">
+        <h2>Assessment</h2>
+        <p>According to the data you entered, I tried to match it with my pricing to
+            make the best and deal for you. Take a look at this simple quotation and let me know how we can work together</p>
+    </div>
+</section>
+<section class="pricing">
+    <div class="container">
+        <h1>Pricing</h1>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Rate</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                
+            </tr>
+            <tr>
+                <td>Domain name</td>
+                <td>${{quotation.domain_name_value}}</td>
+                <td>1</td>
+                <td>${{quotation.domain_name_value}}</td>
+            </tr>
+            <tr>
+                <td>Hosting</td>
+                <td>${{quotation.hosting_value}}</td>
+                <td>1</td>
+                <td>${{quotation.hosting_value}}</td>
+            </tr>
+            <tr>
+                <td>Web Design</td>
+                <td>${{quotation.web_design_value}}</td>
+                <td>1</td>
+                <td>${{quotation.web_design_value}}</td>
+            </tr>
+            <tr>
+                <td>Web Development</td>
+                <td>${{quotation.web_development_value}}</td>
+                <td>1</td>
+                <td>${{quotation.web_development_value}}</td>
+            </tr>
+
+            <tr>
+                <td>SEO</td>
+                <td>${{quotation.seo_value}}</td>
+                <td>1</td>
+                <td>${{quotation.seo_value}}</td>
+            </tr>
+            
+            <tr>
+                <td>Technical Support</td>
+                <td>${{quotation.technical_suport_value}}</td>
+                <td>1</td>
+                <td>${{quotation.technical_suport_value}}</td>
+            </tr>
+
+            <tr>
+                <td>TOTAL</td>
+                <td>${{quotation.quotation_total}}</td>
+                <td>1</td>
+                <td>${{quotation.quotation_total}}</td>
+            </tr>
+
+            
+        </table>
+        <p>NO EXTRA COST, NO HIDDEN CHARGES. Click on Book a meeting, and let's start your project</p>
+        <a href="#" class="cta">
+            Book a meeting
+        </a>
+    </div>
+    
+</section>
+<section class="processing">
+    <div class="container">
+        <h1>Processing</h1>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Phase</th>
+                <th>Exp</th>
+                <th>Timeline</th>
+                
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Mockup design</td>
+                <td>Design of a mockup for the entire website, including content, font and media</td>
+                <td>7 Days</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Feedback</td>
+                <td>You’ll have your time to check on the new design and check if I missed or need to change
+                     anything, to meet your wants and respective to the design</td>
+                <td>2 Days</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Applying feedback</td>
+                <td>I will apply all advised feedback and submit a new design of the Website</td>
+                <td>7 Days</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Development</td>
+                <td>Developing the final design using html, css, js and python. All functionalities included </td>
+                <td>7 Days</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>1 Revision and test</td>
+                <td>Revising the first desing, giving feedback and testing of the task that a website should perform</td>
+                <td>1 Days</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>1st Debugging</td>
+                <td>Debugging all erros found with the first revision and applying feedback</td>
+                <td>2 Days</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>2nd Revision and test</td>
+                <td>Revising the second desing, giving feedback and testing of the task that a website should perform</td>
+                <td>1 Days</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Launch and live testing</td>
+                <td>Launching the project to production and live testing</td>
+                <td>1 Days</td>
+            </tr>
+        </table>
+        <p>NO EXTRA COST, NO HIDDEN CHARGES. Click on Book a meeting, and let's start your project</p>
+        <a href="#" class="cta">
+            Book a meeting
+        </a>
+    </div>
+</section>
+
+{% endblock %}

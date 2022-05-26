@@ -1145,6 +1145,77 @@ form .form-elements .full-form-element {
   }
 }
 
+.proposal-title .container {
+  padding-top: 200px;
+  padding-bottom: 20px;
+}
+
+.assessment .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pricing .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pricing .container P {
+  font-size: 18px;
+}
+
+.pricing .container a.cta {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.processing .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.processing .container P {
+  font-size: 18px;
+}
+
+.processing .container a.cta {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #333;
+  text-align: left;
+  padding: 8px;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
 #cookiePopup {
   background-color: #ffffff;
   position: absolute;

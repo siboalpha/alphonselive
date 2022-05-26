@@ -1075,6 +1075,71 @@ form {
     }
 }
 
+// QUOTATION RESULTS
+.proposal-title {
+    .container {
+        padding-top: 200px;
+        padding-bottom: 20px;
+    }
+}
+
+.assessment {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+.pricing {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        P {
+            font-size: 18px;
+        }
+
+        a.cta {
+            align-self: flex-start;
+        }
+        
+    }
+}
+
+.processing {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        P {
+            font-size: 18px;
+        }
+        a.cta {
+            align-self: flex-start;
+        }
+    }
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #333;
+    text-align: left;
+    padding: 8px;
+    font-size: 18px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #1f1f1f;
+  }
+
 
 //COOKIES
   #cookiePopup {
