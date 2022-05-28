@@ -13,7 +13,7 @@
                     increase revenue, and overall value to your business with a website that converts.
                     I’m giving away 100 free websites to celebrate my portfolio service launch. If you think you or your
                     friend needs it, click the "Get yours now" button</p>
-                <a href="{% url 'offer' %}">
+                <a href="{% url 'quotation' %}">
                     <button class="cta">
                         Request a quotation
                     </button>
@@ -43,9 +43,12 @@
                         I can help you with the best possible suggestions and ideas that we can proceed with. With me,
                         you aren’t forced to accept anything. I give you a variety of options we can work on together.
                     </p>
-                    <button class="cta">
-                        Request a quotation
-                    </button>
+                    <a href="{% url 'quotation' %}">
+                        <button class="cta">
+                            Request a quotation
+                        </button>
+                    </a>
+                    
                 </div>
                 <div class="right-col">
                     <img src="{% static 'img/Home-Cosmetics-small.png' %}" alt="">

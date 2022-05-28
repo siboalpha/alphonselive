@@ -123,7 +123,7 @@ img {
 
 /* LOGO */
 .logo img {
-  width: 170px;
+  height: 50px;
 }
 
 /* NAVBAR MENU */
@@ -268,7 +268,6 @@ input[type=checkbox] {
 
 .full-section .hero-section .right-col img {
   width: 100%;
-  background-color: #181818;
 }
 
 .about-me {
@@ -319,7 +318,7 @@ input[type=checkbox] {
 
 .empty-section {
   height: 200px;
-  background-image: url("/static/img/programming-1873854_1280-2.png");
+  background-image: url("/img/programming-1873854_1280-2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1102,12 +1101,6 @@ form .form-elements .full-form-element {
   text-transform: capitalize;
 }
 
-@media (min-width: 540px) {
-  .thank-you .container {
-    width: 540px;
-  }
-}
-
 .quotation .container {
   padding-top: 150px;
 }
@@ -1145,9 +1138,20 @@ form .form-elements .full-form-element {
   }
 }
 
+@media (min-width: 540px) {
+  .thank-you .container {
+    width: 540px;
+  }
+}
+
 .proposal-title .container {
   padding-top: 200px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.assessment .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pricing .container {
@@ -1187,6 +1191,16 @@ form .form-elements .full-form-element {
 
 .processing .container P {
   font-size: 18px;
+}
+
+.processing .container .book-a-metting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 20px;
 }
 
 .processing .container a.cta {

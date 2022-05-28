@@ -105,7 +105,7 @@ img {
 /* LOGO */
 .logo {
     img {
-        width: 170px;
+        height: 50px;
     }
 }
 
@@ -243,7 +243,6 @@ input[type=checkbox] {
         .right-col {
             img {
                 width: 100%;
-                background-color: #181818;
             }
         }
     }
@@ -299,7 +298,7 @@ input[type=checkbox] {
 
 .empty-section {
     height: 200px;
-    background-image: url("/static/img/programming-1873854_1280-2.png");
+    background-image: url("/img/programming-1873854_1280-2.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1000,7 +999,6 @@ form {
     }
 }
 
-
 // Thank you page
 
 .thank-you {
@@ -1032,14 +1030,8 @@ form {
     }
 }
 
-@media(min-width:540px) {
-    .thank-you {
-        .container {
-            width: 540px;
-        }
-    }
-}
 
+// QUOTATION PAGE
 .quotation{
     .container {
         padding-top: 150px;
@@ -1075,11 +1067,26 @@ form {
     }
 }
 
+@media(min-width:540px) {
+    .thank-you {
+        .container {
+            width: 540px;
+        }
+    }
+}
+
 // QUOTATION RESULTS
 .proposal-title {
     .container {
         padding-top: 200px;
-        padding-bottom: 0;
+        padding-bottom: 20px;
+    }
+}
+
+.assessment {
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 .pricing {
@@ -1110,6 +1117,11 @@ form {
         P {
             font-size: 18px;
         }
+        .book-a-metting {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
         a.cta {
             align-self: flex-start;
         }
@@ -1132,7 +1144,6 @@ table {
   tr:nth-child(even) {
     background-color: #1f1f1f;
   }
-
 
 //COOKIES
   #cookiePopup {
@@ -1196,5 +1207,3 @@ table {
       bottom: 0;
     }
   }
-
-  //end
