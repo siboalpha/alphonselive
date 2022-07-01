@@ -17,7 +17,7 @@ def index(request):
             client_name = form.cleaned_data['first_name']
             client_email = form.cleaned_data['email']
             context = {'client_name': client_name, 'client_email': client_email}
-            email_template = render_to_string('website/emails/new_lead.html', context)
+            email_template = render_to_string('emails/new_lead.html', context)
 
             email = EmailMessage(
                 'New Lead',
@@ -32,13 +32,13 @@ def index(request):
                 return HttpResponse("Form saved but admin did not get an email")
             return redirect('thank-you')
     context = {'form': form}
-    return render(request, 'website/index.html', context)
+    return render(request, 'index.html', context)
 
 def offer(request):
-    return render(request, 'website/offer.html')
+    return render(request, 'offer.html')
 
 def thankYou(request):
-    return render(request, 'website/thank-you.html')
+    return render(request, 'thank-you.html')
 
 
 def quotation(request):
@@ -139,9 +139,9 @@ def quotation(request):
             form.save()
             instance = form.save()
             return redirect('quotation-results', pk=instance.pk)
-    return render(request, 'website/quotation.html', context)
+    return render(request, 'quotation.html', context)
 
 def quotationResults(request, pk):
     quotation = Quotation.objects.get(id=pk)
     context = {'quotation': quotation}
-    return render(request, 'website/quotation-results.html', context)
+    return render(request, 'quotation-results.html', context)

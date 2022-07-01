@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 20px;
     background-color: #181818;
     color: white;
 }
@@ -298,7 +299,7 @@ input[type=checkbox] {
 
 .empty-section {
     height: 200px;
-    background-image: url("/img/programming-1873854_1280-2.png");
+    background-image: url("/static/img/programming-1873854_1280-2.png");
     background-size: cover;
     background-repeat: no-repeat;
 }

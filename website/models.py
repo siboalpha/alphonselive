@@ -1,6 +1,9 @@
+from distutils.command.upload import upload
 from email import message
 from django.db import models
+from django.forms import model_to_dict
 from django.urls import reverse
+from django.utils import timezone
 
 # Create your models here.
 
@@ -65,3 +68,12 @@ class Quotation(models.Model):
 
     def __str__(self):
         return self.first_name
+
+class Project (models.Model):
+    title = models.CharField(max_length=255)
+    company = models.CharField(max_length=255)
+    project_image = models.ImageField(upload_to = 'Projects Images')
+    project_image_mobile = models.ImageField(upload_to = 'Projects Images', null=True)
+    started_on = models.DateField(auto_now_add=None)
+    completed_on = models.DateField(auto_now_add=None)
+    details = models.TextField(max_length=2500)

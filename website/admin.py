@@ -1,6 +1,16 @@
 from django.contrib import admin
+from django.urls import clear_script_prefix
 from . import models
 # Register your models here.
+@admin.register(models.contactFormMessage)
+class contactFormMessageAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "phone_number")
 
-admin.site.register(models.contactFormMessage)
-admin.site.register(models.Quotation)
+@admin.register(models.Quotation)
+class QuotationAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "phone_number", "website_type", "quotation_total")
+
+
+@admin.register(models.Project)
+class ProjetAdmin(admin.ModelAdmin):
+    list_display = ("title", "company", "started_on", "completed_on")

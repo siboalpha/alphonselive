@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.forms import ModelForm, TextInput, Textarea, EmailInput, Select
 from . import models
 
