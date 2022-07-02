@@ -7,5 +7,7 @@ urlpatterns = [
     path('offer/', views.offer, name='offer'),
     path('thank-you/', views.thankYou, name='thank-you'),
     path('quotation/', views.quotation, name='quotation'),
-    path('quotation-results/<pk>/', views.quotationResults, name='quotation-results')
+    path('quotation-results/<pk>/', views.quotationResults, name='quotation-results'),
+
+    path('project/<pk>/', views.singlePortfolio, name='project')
 ]

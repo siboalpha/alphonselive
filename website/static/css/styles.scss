@@ -319,6 +319,10 @@ input[type=checkbox] {
 
             img {
                 width: 100%;
+                height: 200px;
+                object-fit: cover;
+                overflow: hidden;
+                object-position: top;
             }
 
             .card-content {
@@ -1208,3 +1212,86 @@ table {
       bottom: 0;
     }
   }
+
+  // SINGLE PORFOLIO
+
+.single-portfolio {
+    img {
+        border-radius: 5px;
+    }
+    padding-top: 100px;
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .col-right {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+                position: relative;
+                .content {
+                    position: relative;
+                    .screen {
+                        height: 300px;
+                        overflow: hidden;
+                        width: 100%;
+                        background: url("/img/Imbonizarwo\ Website\ Mobile.jpg");
+                        background-position: top;
+                        background-size: cover;
+                        transition: ease-in-out 2s;
+                        border-radius: 5px;
+                        z-index: 0;
+                    }
+                    .screen:hover {
+                        background-position: bottom;
+                        transition: ease-in-out 14s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SINGLE PORTFOLIO TABLET STYLES
+
+@media screen and (min-width: 560px) {
+    .single-portfolio {
+        padding-top: 150px;
+        .container {
+            flex-direction: row;
+            gap: 30px;
+            .col-left {
+                width: 50%;
+            }
+            .col-right {
+                width: 50%;
+                .desktop {
+                    display: block;
+                    position: relative;
+                    .content {
+                        position: relative;
+                        .screen {
+                            img {
+                                height: 600px;
+                                overflow: hidden;
+                                object-fit: cover;
+                                object-position: top;
+                                transition: ease-in-out 1s;
+                            }
+                             
+                            img:hover {
+                                object-position: bottom;
+                                transition: ease-in-out 5s;
+                            }
+                        }
+                    }
+                }
+                .mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

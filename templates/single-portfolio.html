@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="single-portfolio">
+    <div class="container">
+        <div class="col-left">
+            <div class="portfolio-section">
+                <h1 class="heading">{{project.title}}</h1>
+                <h5>By {{project.company}} </h5>
+                <h6>Started on {{project.started_on}} | Completed on {{project.completed_on}}</h6>
+                <p class="introduction">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s, when an unknown printer took a galley of type and scrambled it 
+                    to make a type specimen book.
+                </p>
+            </div>
+
+            <div class="portfolio-section">
+                <h4 class="sub-heading">Imbonizarwo Website</h4>
+                <p class="challenge">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s.
+                </p>
+            </div>
+            <div class="portfolio-section">
+                <h4 class="sub-heading">Imbonizarwo Website</h4>
+                <p class="approach">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s.
+                </p>
+            </div>
+
+            <div class="portfolio-section">
+                <h4 class="sub-heading">Imbonizarwo Website</h4>
+                <p class="solution">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s.
+                </p>
+            </div>
+
+            <div class="portfolio-section-call-to-action">
+                <h4 class="heading">Let’s work on your next project</h4>
+                <p class="call-to-action">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s.
+                </p>
+                <a href="" class="cta">Get a quotation</a>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <div class="desktop">
+                <div class="content">
+                    <div class="screen" >
+                        <img src="{{project.project_image.url}}" alt="">
+                    </div>
+                </div><!--content-->
+            </div>
+            <div class="mobile">
+                <div class="content">
+                    <div class="screen" >
+                    </div>
+                </div><!--content-->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

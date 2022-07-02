@@ -1,14 +1,16 @@
 import email
+from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
-from website.models import Quotation
+from website.models import Quotation, Project
 from .forms import ContactForm, QuotationForm
 from django.core.mail import EmailMessage
 from core import settings
 from django.template.loader import render_to_string
 # Create your views here.
 def index(request):
+    projects = Project.objects.all()
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -31,7 +33,7 @@ def index(request):
             except:
                 return HttpResponse("Form saved but admin did not get an email")
             return redirect('thank-you')
-    context = {'form': form}
+    context = {'form': form, 'projects':projects}
     return render(request, 'index.html', context)
 
 def offer(request):
@@ -145,3 +147,8 @@ def quotationResults(request, pk):
     quotation = Quotation.objects.get(id=pk)
     context = {'quotation': quotation}
     return render(request, 'quotation-results.html', context)
+
+def singlePortfolio(request,pk):
+    project = Project.objects.get(id=pk)
+    context = {'project': project}
+    return render(request, 'single-portfolio.html', context)

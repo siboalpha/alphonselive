@@ -110,20 +110,22 @@
                 of over 4 years in website design industry.
             </h4>
             <div class="portfolio-grid">
+                {% for project in projects %}
                 <div class="portfolio-card">
-                    <img src="{% static 'img/programming-1873854_1280-2.png' %}" alt="">
+                    <img src="{{project.project_image.url}}" alt="">
                     <div class="card-content">
                         <h5 class="project-title">
-                            Project example
+                            {{project.title}}
                         </h5>
                         <div class="project-short-details">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
                             printing
                             and typesetting industry.
                         </div>
-                        <a class="project-details-link" href="#">More details <span><i
+                        <a class="project-details-link" href="{% url 'project' project.id %}">More details <span><i
                                     class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
+                {% endfor %}
 
                 <div class="portfolio-card">
                     <img src="{% static 'img/programming-1873854_1280-2.png' %}" alt="">
