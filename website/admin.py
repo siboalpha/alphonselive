@@ -14,3 +14,7 @@ class QuotationAdmin(admin.ModelAdmin):
 @admin.register(models.Project)
 class ProjetAdmin(admin.ModelAdmin):
     list_display = ("title", "company", "started_on", "completed_on")
+
+@admin.register(models.specialOfferLeads)
+class specialOfferLeadsAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "phone_number")

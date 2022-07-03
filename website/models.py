@@ -22,7 +22,6 @@ class specialOfferLeads(models.Model):
     last_name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
     phone_number = models.CharField(max_length=40)
-    industry = models.CharField(max_length=40)
     website_details = models.TextField(max_length=500)
 
     def __str__(self):
@@ -76,4 +75,10 @@ class Project (models.Model):
     project_image_mobile = models.ImageField(upload_to = 'Projects Images', null=True)
     started_on = models.DateField(auto_now_add=None)
     completed_on = models.DateField(auto_now_add=None)
-    details = models.TextField(max_length=2500)
+    details = models.TextField(max_length=2500, null=True)
+
+    def __str__(self):
+        return self.title
+
+    def short_description(self):
+        return self.details[0:100]

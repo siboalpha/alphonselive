@@ -33,3 +33,15 @@ class QuotationForm(ModelForm):
             'technical_suport': Select(attrs={'class': 'form-control', 'placeholder': 'Last name'}),
             'notes': Textarea(attrs={'class': 'form-control', 'placeholder': 'Type your message here', 'rows': '6'}),
         }
+
+class specialOfferLeadsForm(ModelForm):
+    class Meta:
+        model = models.specialOfferLeads
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'website_details']
+        widgets = {
+            'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Your first name'}),
+            'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Your last name'}),
+            'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your email'}),
+            'phone_number': TextInput(attrs={'class': 'form-control', 'placeholder': 'Your phone number'}),
+            'website_details': Textarea(attrs={'class': 'form-control', 'placeholder': 'Tell me about the website you want'}),
+        }

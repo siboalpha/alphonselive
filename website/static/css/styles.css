@@ -26,9 +26,18 @@ img {
 
 .container {
   padding: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+  }
 }
 
 .cta {
@@ -70,18 +79,22 @@ img {
 
 .form-control::-webkit-input-placeholder {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
 }
 
 .form-control:-ms-input-placeholder {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
 }
 
 .form-control::-ms-input-placeholder {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
 }
 
 .form-control::placeholder {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px;
 }
 
 .navigation-bar {
@@ -249,7 +262,7 @@ input[type=checkbox] {
 
 .full-section .hero-section {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,6 +278,10 @@ input[type=checkbox] {
 
 .full-section .hero-section .left-col .divider {
   margin: auto;
+}
+
+.full-section .hero-section .right-col {
+  display: none;
 }
 
 .full-section .hero-section .right-col img {
@@ -353,6 +370,15 @@ input[type=checkbox] {
   overflow: hidden;
   -o-object-position: top;
      object-position: top;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.portfolio .portfolio-grid .portfolio-card img:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+  -webkit-transition: ease-in-out 2s;
+  transition: ease-in-out 2s;
 }
 
 .portfolio .portfolio-grid .portfolio-card .card-content {
@@ -380,120 +406,6 @@ input[type=checkbox] {
 
 .portfolio .portfolio-grid .portfolio-card .card-content .project-details-link:hover {
   color: white;
-}
-
-.experience-skills .skills ul {
-  margin-left: -40px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .python {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-  background-color: #3FA6F0;
-  margin-bottom: 2;
-  border-radius: 5px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .python p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 18px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .php {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-  background-color: #3FA6F0;
-  margin-bottom: 2;
-  border-radius: 5px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .php p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 18px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .javascript {
-  width: 85%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-  background-color: #3FA6F0;
-  margin-bottom: 2;
-  border-radius: 5px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .javascript p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 18px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .photoshop {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-  background-color: #3FA6F0;
-  margin-bottom: 2;
-  border-radius: 5px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .photoshop p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 18px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .wordpress {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-  background-color: #3FA6F0;
-  margin-bottom: 2;
-  border-radius: 5px;
-}
-
-.experience-skills .skills ul li .python .skills-bar .wordpress p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  font-size: 18px;
 }
 
 .experience-skills .experience {
@@ -599,6 +511,7 @@ footer .copyright {
     margin: 0;
   }
   .full-section .hero-section .right-col {
+    display: block;
     width: 50%;
   }
   .full-section .hero-section .right-col img {
@@ -675,8 +588,8 @@ footer .copyright {
   .experience-skills .skills {
     width: 50%;
   }
-  .experience-skills .skills ul {
-    margin-left: -40px;
+  .experience-skills .skills img {
+    width: 90%;
   }
   .experience-skills .experience {
     padding-top: 0;
@@ -1322,41 +1235,63 @@ tr:nth-child(even) {
           flex-direction: column-reverse;
 }
 
+.single-portfolio .container .col-left {
+  width: 100%;
+}
+
+.single-portfolio .container .col-left .portfolio-section .heading {
+  margin-bottom: -20px;
+}
+
+.single-portfolio .container .col-left .portfolio-section h5 {
+  margin-bottom: -20px;
+}
+
+.single-portfolio .container .col-left .portfolio-section .sub-heading {
+  margin-bottom: -20px;
+}
+
+.single-portfolio .container .col-left .portfolio-section-call-to-action {
+  background-color: white;
+  color: #181818;
+  border-radius: 5px;
+  padding: 30px;
+}
+
 .single-portfolio .container .col-right .desktop {
   display: none;
 }
 
-.single-portfolio .container .col-right .mobile {
+.single-portfolio .container .col-right .desktop {
   display: block;
   position: relative;
 }
 
-.single-portfolio .container .col-right .mobile .content {
+.single-portfolio .container .col-right .desktop .content {
   position: relative;
 }
 
-.single-portfolio .container .col-right .mobile .content .screen {
+.single-portfolio .container .col-right .desktop .content .screen img {
   height: 300px;
   overflow: hidden;
-  width: 100%;
-  background: url("/img/Imbonizarwo Website Mobile.jpg");
-  background-position: top;
-  background-size: cover;
-  -webkit-transition: ease-in-out 2s;
-  transition: ease-in-out 2s;
-  border-radius: 5px;
-  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
 }
 
-.single-portfolio .container .col-right .mobile .content .screen:hover {
-  background-position: bottom;
-  -webkit-transition: ease-in-out 14s;
-  transition: ease-in-out 14s;
+.single-portfolio .container .col-right .desktop .content .screen img:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+  -webkit-transition: ease-in-out 5s;
+  transition: ease-in-out 5s;
 }
 
 @media screen and (min-width: 560px) {
   .single-portfolio {
-    padding-top: 150px;
+    padding-top: 50px;
   }
   .single-portfolio .container {
     -webkit-box-orient: horizontal;
@@ -1367,6 +1302,12 @@ tr:nth-child(even) {
   }
   .single-portfolio .container .col-left {
     width: 50%;
+  }
+  .single-portfolio .container .col-left .portfolio-section-call-to-action {
+    background-color: white;
+    color: #181818;
+    border-radius: 5px;
+    padding: 30px;
   }
   .single-portfolio .container .col-right {
     width: 50%;

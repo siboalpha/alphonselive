@@ -51,8 +51,8 @@
                     
                 </div>
                 <div class="right-col">
-                    <img src="{% static 'img/Home-Cosmetics-small.png' %}" alt="">
-                    <img src="{% static 'img/Home-Cosmetics-small.png' %}" alt="">
+                    <img src="{% static 'img/Ineza-Couture.jpg' %}" alt="">
+                    <img src="{% static 'img/Imbonizarwo.jpg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -117,94 +117,20 @@
                         <h5 class="project-title">
                             {{project.title}}
                         </h5>
-                        <div class="project-short-details">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                            printing
-                            and typesetting industry.
+                        <div class="project-short-details">{{project.short_description}}
                         </div>
                         <a class="project-details-link" href="{% url 'project' project.id %}">More details <span><i
                                     class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
                 {% endfor %}
-
-                <div class="portfolio-card">
-                    <img src="{% static 'img/programming-1873854_1280-2.png' %}" alt="">
-                    <div class="card-content">
-                        <h5 class="project-title">
-                            Project example
-                        </h5>
-                        <div class="project-short-details">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                            printing
-                            and typesetting industry.
-                        </div>
-                        <a class="project-details-link" href="#">More details <span><i
-                                    class="fas fa-arrow-right"></i></span></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <img src="{% static 'img/programming-1873854_1280-2.png' %}" alt="">
-                    <div class="card-content">
-                        <h5 class="project-title">
-                            Project example
-                        </h5>
-                        <div class="project-short-details">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                            printing
-                            and typesetting industry.
-                        </div>
-                        <a class="project-details-link" href="#">More details <span><i
-                                    class="fas fa-arrow-right"></i></span></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <img src="{% static 'img/programming-1873854_1280-2.png' %}" alt="">
-                    <div class="card-content">
-                        <h5 class="project-title">
-                            Project example
-                        </h5>
-                        <div class="project-short-details">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                            printing
-                            and typesetting industry.
-                        </div>
-                        <a class="project-details-link" href="#">More details <span><i
-                                    class="fas fa-arrow-right"></i></span></a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
     <section class="container experience-skills">
         <div class="skills">
             <h4 class="sub-heading"> Skills</h4>
-            <ul>
-                <li>
-                    <div class="python">
-                        <div class="skills-bar">
-                            <div class="python">
-                                <p>Python</p>
-                                <p>85%</p>
-                            </div>
-                            <div class="php">
-                                <p>PHP</p>
-                                <p>80%</p>
-                            </div>
-                            <div class="javascript">
-                                <p>JavaScript</p>
-                                <p>85%</p>
-                            </div>
-                            <div class="photoshop">
-                                <p>Photoshop</p>
-                                <p>80%</p>
-                            </div>
-                            <div class="wordpress">
-                                <p>WordPress</p>
-                                <p>100%</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <img src="{% static 'img/skills.png' %}" alt="">
         </div>
         <div class="experience">
             <h4 class="sub-heading">Experience</h4>

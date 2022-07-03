@@ -1,16 +1,21 @@
-import email
 from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
 from website.models import Quotation, Project
-from .forms import ContactForm, QuotationForm
+from .forms import ContactForm, QuotationForm, specialOfferLeadsForm
 from django.core.mail import EmailMessage
 from core import settings
 from django.template.loader import render_to_string
+
+from django.core.paginator import Paginator
+
 # Create your views here.
 def index(request):
-    projects = Project.objects.all()
+    all_projects = Project.objects.all()
+    paginaginated_projects = Paginator(all_projects, 4)
+    page_number = request.GET.get('page')
+    projects = paginaginated_projects.get_page(page_number)
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -37,7 +42,14 @@ def index(request):
     return render(request, 'index.html', context)
 
 def offer(request):
-    return render(request, 'offer.html')
+    form = specialOfferLeadsForm()
+    context = {'form': form}
+    if request.method == 'POST':
+        form = specialOfferLeadsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thank-you')
+    return render(request, 'offer.html', context)
 
 def thankYou(request):
     return render(request, 'thank-you.html')

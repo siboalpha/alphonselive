@@ -204,8 +204,8 @@
                 </a>
             </div>
             <div class="right-col">
-                <img src="{% static 'img/Home-Cosmetics-small.png' %}" alt="">
-                <img src="{% static 'img/Home-Cosmetics-small.png' %}" alt="">
+                <img src="{% static 'img/Ineza-Couture.jpg' %}" alt="">
+                <img src="{% static 'img/Imbonizarwo.jpg' %}" alt="">
             </div>
         </div>
     </div>
@@ -217,27 +217,27 @@
         <h4 class="section-intro"> Let's work together, fill the form with basic information, and let's beggin your
             project</h4>
         <div class="offer-form-content">
-            <form action="">
+            <form action="" method="POST">
+                {% csrf_token %}
                 <div class="form-elements">
                     <div class="half-form-element">
-                        <input class="form-control" type="text" placeholder=" First name">
+                        {{form.first_name}}
                     </div>
                     <div class="half-form-element">
-                        <input class="form-control" type="text" placeholder=" Last name">
+                        {{form.last_name}}
                     </div>
                 </div>
                 <div class="form-elements">
                     <div class="half-form-element">
-                        <input class="form-control" type="text" placeholder=" Email">
+                        {{form.email}}
                     </div>
                     <div class="half-form-element">
-                        <input class="form-control" type="text" placeholder=" Phone number">
+                        {{form.phone_number}}
                     </div>
                 </div>
                 <div class="form-elements">
                     <div class="full-form-element">
-                        <textarea class="form-control" rows="6"
-                            placeholder="Tell me about the website you need"></textarea>
+                        {{form.website_details}}
                     </div>
                 </div>
                 <div class="form-elements">

@@ -9,36 +9,7 @@
                 <h5>By {{project.company}} </h5>
                 <h6>Started on {{project.started_on}} | Completed on {{project.completed_on}}</h6>
                 <p class="introduction">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since
-                    the 1500s, when an unknown printer took a galley of type and scrambled it 
-                    to make a type specimen book.
-                </p>
-            </div>
-
-            <div class="portfolio-section">
-                <h4 class="sub-heading">Imbonizarwo Website</h4>
-                <p class="challenge">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since
-                    the 1500s.
-                </p>
-            </div>
-            <div class="portfolio-section">
-                <h4 class="sub-heading">Imbonizarwo Website</h4>
-                <p class="approach">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since
-                    the 1500s.
-                </p>
-            </div>
-
-            <div class="portfolio-section">
-                <h4 class="sub-heading">Imbonizarwo Website</h4>
-                <p class="solution">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since
-                    the 1500s.
+                    {{project.details}}
                 </p>
             </div>
 
@@ -49,7 +20,7 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since
                     the 1500s.
                 </p>
-                <a href="" class="cta">Get a quotation</a>
+                <a href="{% url 'quotation' %}" class="cta">Get a quotation</a>
             </div>
         </div>
 
@@ -58,12 +29,6 @@
                 <div class="content">
                     <div class="screen" >
                         <img src="{{project.project_image.url}}" alt="">
-                    </div>
-                </div><!--content-->
-            </div>
-            <div class="mobile">
-                <div class="content">
-                    <div class="screen" >
                     </div>
                 </div><!--content-->
             </div>
