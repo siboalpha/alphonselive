@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 1;
   padding: 0;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 20px;
@@ -42,7 +42,7 @@ img {
 
 .cta {
   background-color: #3FA6F0;
-  padding: 15px;
+  padding: 15px 30px;
   border: none;
   color: white;
   border-radius: 5px;
@@ -252,7 +252,6 @@ input[type=checkbox] {
 }
 
 .full-section {
-  padding-top: 70px;
   background: url("/static/img/heroimg.png");
   background-position-x: right;
   background-position-y: top;
@@ -261,11 +260,18 @@ input[type=checkbox] {
 }
 
 .full-section .hero-section {
-  padding-top: 60px;
-  padding-bottom: 10px;
+  background: url("/static/img/home background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000000e1;
+  background-blend-mode: overlay;
+  margin-top: 120px;
+  padding: 100px 0 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -493,7 +499,9 @@ footer .copyright {
     background-repeat: no-repeat;
   }
   .full-section .hero-section {
-    padding-top: 160px;
+    margin-top: 0;
+    background: none;
+    padding-top: 100px;
     padding-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -504,6 +512,19 @@ footer .copyright {
             flex-direction: row;
   }
   .full-section .hero-section .left-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
     text-align: start;
   }
@@ -513,9 +534,11 @@ footer .copyright {
   .full-section .hero-section .right-col {
     display: block;
     width: 50%;
+    text-align: end;
   }
   .full-section .hero-section .right-col img {
-    width: 100%;
+    width: auto;
+    height: 500px;
   }
   .about-me {
     padding-top: 60px;
