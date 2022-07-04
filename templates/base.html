@@ -19,7 +19,9 @@
         <header class="container">
             <nav class="navbar">
                 <!-- LOGO -->
-                <div class="logo"><img href="{% url 'home' %}" src="{% static 'img/Alphonse-Logo-2.png' %}" alt=""></div>
+                <a href="{% url 'home' %}" class="logo">
+                    <img href="{% url 'home' %}" src="{% static 'img/Alphonse-Logo-2.png' %}" alt="">
+                </a>
                 <!-- NAVIGATION MENU -->
                 <ul class="nav-links">
                     <!-- USING CHECKBOX HACK -->
@@ -28,9 +30,9 @@
                     <!-- NAVIGATION MENUS -->
                     <div class="menu">
                         <li><a href="/">Welcome</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="/#about">About</a></li>
                         <li class="services">
-                            <a href="#services">Services</a>
+                            <a href="/#services">Services</a>
                             <!-- DROPDOWN MENU -->
                             <!--
                                 <ul class="dropdown">
@@ -42,7 +44,7 @@
                             </ul>
                             -->
                         </li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="/#portfolio">Portfolio</a></li>
                         <li class="cta"><a href="{% url 'quotation' %}">Request a quotation</a></li>
                     </div>
                 </ul>

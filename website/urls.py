@@ -9,5 +9,5 @@ urlpatterns = [
     path('quotation/', views.quotation, name='quotation'),
     path('quotation-results/<pk>/', views.quotationResults, name='quotation-results'),
 
-    path('project/<pk>/', views.singlePortfolio, name='project')
+    path('project/<pk>/', views.singlePortfolio, name='project'),
 ]
