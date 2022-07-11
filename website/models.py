@@ -8,6 +8,7 @@ from django.utils import timezone
 # Create your models here.
 
 class contactFormMessage(models.Model):
+    date_sent = models.DateTimeField(default=timezone.now, null=True)
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
@@ -18,6 +19,7 @@ class contactFormMessage(models.Model):
         return self.first_name
 
 class specialOfferLeads(models.Model):
+    date_sent = models.DateTimeField(default=timezone.now, null=True)
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
@@ -45,6 +47,7 @@ class Quotation(models.Model):
         (Yes, 'Yes'),
         (No, 'No'),
     ]
+    date_sent = models.DateTimeField(default=timezone.now, null=True)
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.CharField(max_length=40)
@@ -82,3 +85,6 @@ class Project (models.Model):
 
     def short_description(self):
         return self.details[0:100]
+
+    class Meta:
+        ordering = ['id']

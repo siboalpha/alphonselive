@@ -11,57 +11,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/54c10e37be.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{% static 'js/main.js' %}"></script>
     <title>Alphonse | Web Developer</title>
 </head>
+
 <body>
-    <div class="navigation-bar">
-        <header class="container">
-            <nav class="navbar">
-                <!-- LOGO -->
-                <a href="{% url 'home' %}" class="logo">
-                    <img href="{% url 'home' %}" src="{% static 'img/Alphonse-Logo-2.png' %}" alt="">
-                </a>
-                <!-- NAVIGATION MENU -->
-                <ul class="nav-links">
-                    <!-- USING CHECKBOX HACK -->
-                    <input type="checkbox" id="checkbox_toggle" />
-                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                    <!-- NAVIGATION MENUS -->
-                    <div class="menu">
-                        <li><a href="/">Welcome</a></li>
-                        <li><a href="/#about">About</a></li>
-                        <li class="services">
-                            <a href="/#services">Services</a>
-                            <!-- DROPDOWN MENU -->
-                            <!--
-                                <ul class="dropdown">
-                                <li><a href="/">Dropdown 1 </a></li>
-                                <li><a href="/">Dropdown 2</a></li>
-                                <li><a href="/">Dropdown 2</a></li>
-                                <li><a href="/">Dropdown 3</a></li>
-                                <li><a href="/">Dropdown 4</a></li>
-                            </ul>
-                            -->
-                        </li>
-                        <li><a href="/#portfolio">Portfolio</a></li>
-                        <li class="cta"><a href="{% url 'quotation' %}">Request a quotation</a></li>
-                    </div>
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="/"><img src="{% static 'img/Alphonse-Logo-2.png' %}" alt=""></a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="/">Welcome</a></li>
+                    <li><a href="/#about">About me</a></li>
+                    <li>
+                        <a href="/#services">Services</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="/#services">UI/UX Design</a></li>
+                            <li><a href="/#services">Web Development</a></li>
+                            <li><a href="/employment.html">Web maintenance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a class="get-in-touch" href="{% url 'quotation' %}"><button class="contact-btn">Request a
+                                quotation</button> </a></li>
+
                 </ul>
             </nav>
-        </header>
-    </div>
+        </div>
+    </section>
     {% block content %}
     {% endblock %}
-    <div id="cookiePopup" class="hide">
-        <img src="cookie.png" />
-        <p>
-          Our website uses cookies to provide your browsing experience and
-          relevant information. Before continuing to use our website, you agree &
-          accept of our <a href="#">Cookie Policy & Privacy.</a>
-        </p>
-        <button id="acceptCookie">Accept</button>
-      </div>
     <footer>
         <div class="copyright container">
             <i class='far fa-copyright'></i>
@@ -69,5 +52,8 @@
         </div>
 
     </footer>
+    
+<script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>

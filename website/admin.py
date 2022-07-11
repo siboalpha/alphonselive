@@ -4,11 +4,11 @@ from . import models
 # Register your models here.
 @admin.register(models.contactFormMessage)
 class contactFormMessageAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number")
+    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
 
 @admin.register(models.Quotation)
 class QuotationAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number", "website_type", "quotation_total")
+    list_display = ("first_name", "last_name", "email", "phone_number", "website_type", "quotation_total", "date_sent")
 
 
 @admin.register(models.Project)
@@ -17,4 +17,4 @@ class ProjetAdmin(admin.ModelAdmin):
 
 @admin.register(models.specialOfferLeads)
 class specialOfferLeadsAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number")
+    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
