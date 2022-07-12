@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-load_dotenv() 
+#load_dotenv()
+load_dotenv("/home/admin/urm/core/.env")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +28,7 @@ SECRET_KEY = os.getenv("MY-SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("MY-DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alphonse.live', 'www.alphonse.live']
 
 #   EMAIL BACKEND
 
