@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("MY-SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("MY-DEBUG")
+DEBUG = False
 
-ALLOWED_HOSTS = ['alphonse.live', 'www.alphonse.live']
+ALLOWED_HOSTS = ['alphonse.live', 'www.alphonse.live', '127.0.0.1']
 
 #   EMAIL BACKEND
 

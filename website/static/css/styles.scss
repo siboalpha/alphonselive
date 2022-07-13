@@ -41,14 +41,12 @@ img {
 .navigation {
     height: $nav-height;
     position: fixed;
+    background-color: $nav-background;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     padding-top: 10px;
-}
-.navigation-bar-black {
-    background-color: $nav-background;
 }
 .nav-container {
     margin: 0 auto;
@@ -537,7 +535,7 @@ footer {
         .hero-section {
             margin-top: 0;
             background: none;
-            padding-top: 100px;
+            padding-top: 150px;
             padding-bottom: 60px;
             display: flex;
             flex-direction: row;
