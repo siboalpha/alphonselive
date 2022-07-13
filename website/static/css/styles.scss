@@ -466,11 +466,14 @@ nav {
 
         .icon-list {
             li {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                justify-content: center;
-                margin-left: -40px;
+                a {
+                    color: $white-color;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    justify-content: center;
+                    margin-left: -40px;
+                }
             }
         }
     }

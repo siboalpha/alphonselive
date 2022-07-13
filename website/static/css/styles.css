@@ -400,7 +400,8 @@ nav ul li ul li a {
 .contact-content .left-col {
   text-align: center;
 }
-.contact-content .left-col .icon-list li {
+.contact-content .left-col .icon-list li a {
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 12px;
