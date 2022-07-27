@@ -406,7 +406,6 @@ nav ul li ul li a {
   align-items: center;
   gap: 12px;
   justify-content: center;
-  margin-left: -40px;
 }
 .contact-content .right-col form {
   display: block;
