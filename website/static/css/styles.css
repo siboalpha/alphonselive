@@ -1102,4 +1102,8 @@ main {
 }
 .appear.inview:nth-child(5) {
   transition-delay: 0.5s;
+}
+
+.captcha {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */

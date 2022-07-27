@@ -1,7 +1,9 @@
 from django.forms import ModelForm, TextInput, Textarea, EmailInput, Select
 from . import models
-
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Checkbox
 class ContactForm(ModelForm):
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
     class Meta:
         model = models.contactFormMessage
         fields = ['first_name', 'last_name', 'email', 'phone_number', 'message']
@@ -11,6 +13,7 @@ class ContactForm(ModelForm):
             'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
             'phone_number': TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone number'}),
             'message': Textarea(attrs={'class': 'form-control', 'placeholder': 'Type your message here', 'rows': '6'}),
+            
         }
 
 class QuotationForm(ModelForm):

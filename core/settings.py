@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-#load_dotenv()
-load_dotenv("/home/admin/alphonselive/core/.env")
+load_dotenv()
+#load_dotenv("/home/admin/alphonselive/core/.env")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("MY-SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['alphonse.live', 'www.alphonse.live', '127.0.0.1']
 
 #   EMAIL BACKEND
@@ -38,6 +38,10 @@ EMAIL_USE_TLS=True
 EMAIL_HOST_USER=os.getenv('MY_EMAIL')
 EMAIL_HOST_PASSWORD=os.getenv('MY_PASSWORD')
 
+# RECAPTCHA
+
+RECAPTCHA_PUBLIC_KEY = os.getenv("RECAPTCHA_SITE_KEY")
+RECAPTCHA_PRIVATE_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
 
 # Application definition
 
@@ -49,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'captcha',
 ]
 
 MIDDLEWARE = [
