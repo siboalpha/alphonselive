@@ -20,6 +20,7 @@ def index(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            '''
             client_name = form.cleaned_data['first_name']
             client_email = form.cleaned_data['email']
             context = {'client_name': client_name, 'client_email': client_email}
@@ -36,6 +37,7 @@ def index(request):
                 email.send()
             except:
                 return HttpResponse("Form saved but admin did not get an email")
+            '''
             return redirect('thank-you')
     context = {'form': form, 'projects':projects}
     return render(request, 'index.html', context)
