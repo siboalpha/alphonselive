@@ -16,6 +16,21 @@ class ContactForm(ModelForm):
             
         }
 
+class FreeWebsiteForm(ModelForm):
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
+    class Meta:
+        model = models.freeWebsiteLead
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'details']
+        widgets = {
+            'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'First name'}),
+            'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Last name'}),
+            'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
+            'phone_number': TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone number'}),
+            'details': Textarea(attrs={'class': 'form-control', 'placeholder': 'Tell me a little bit about the website you want', 'rows': '6'}),
+            
+        }
+
+
 class QuotationForm(ModelForm):
     class Meta:
         model = models.Quotation

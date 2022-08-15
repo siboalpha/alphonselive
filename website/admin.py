@@ -6,6 +6,10 @@ from . import models
 class contactFormMessageAdmin(admin.ModelAdmin):
     list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
 
+@admin.register(models.freeWebsiteLead)
+class freeWebsiteLeadLeadAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
+
 @admin.register(models.Quotation)
 class QuotationAdmin(admin.ModelAdmin):
     list_display = ("first_name", "last_name", "email", "phone_number", "website_type", "quotation_total", "date_sent")

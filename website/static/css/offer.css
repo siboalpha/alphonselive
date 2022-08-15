@@ -1,0 +1,581 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 20px;
+  background-color: white;
+  color: #263238;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.navigation {
+  height: 70px;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-top: 10px;
+}
+
+.nav-container {
+  margin: 0 auto;
+}
+
+.contact-btn {
+  background-color: #3fa6f0;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 799px) {
+  .nav-container {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
+.brand {
+  margin-left: 20px;
+  position: absolute;
+}
+.brand a img {
+  height: 50px;
+  width: auto;
+}
+
+@media only screen and (min-width: 799px) {
+  .brand {
+    margin-left: 0;
+  }
+}
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 20px 0 20px;
+  line-height: 50px;
+  background: white;
+  color: #263238;
+  text-decoration: none;
+}
+nav ul li a::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #3fa6f0;
+  width: 0%;
+  bottom: 0px;
+}
+nav ul li a:hover::before {
+  width: 70%;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 799px) {
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+    text-align: center;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li a:hover::before {
+    width: 20%;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #3fa6f0;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+.form-control {
+  width: 90%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+.form-control::-moz-placeholder {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 18px;
+}
+.form-control:-ms-input-placeholder {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 18px;
+}
+.form-control::placeholder {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 18px;
+}
+
+.offer-sub-heading {
+  color: #3fa6f0;
+  font-weight: 200;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.offer-title {
+  font-size: 24px;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.offer-button {
+  padding: 15px 35px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dark-blue {
+  background-color: #263238;
+  color: white;
+  transition: all 0.3s;
+}
+.dark-blue:hover {
+  background-color: #3fa6f0;
+}
+
+.light-blue {
+  background-color: #3fa6f0;
+  color: white;
+  border: 1px solid #3fa6f0;
+  transition: all 0.3s;
+}
+.light-blue:hover {
+  background-color: white;
+  color: #263238;
+}
+
+.promotion {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.promotion .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.promotion .container .col-right {
+  position: relative;
+}
+.promotion .container .col-left {
+  background-color: #263238;
+  color: white;
+  margin-top: -150px;
+  z-index: 2;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+.promotion .container .col-left .promo-heading {
+  font-size: 32px;
+}
+
+.features {
+  background: url("/static/img/offer/Ellipse 1.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+.features .container .features-grid {
+  display: grid;
+  gap: 24px;
+}
+.features .container .features-grid .feature {
+  text-align: start;
+  background-color: rgba(35, 165, 240, 0.3607843137);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.necessities-section {
+  text-align: center;
+  padding: 50px 0;
+}
+.necessities-section .container .necessities {
+  display: grid;
+  gap: 24px;
+}
+.necessities-section .container .necessities .necessity {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #F5F5F5;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+}
+.necessities-section .container .necessities .necessity .nec-offer-title {
+  font-size: 22px;
+}
+
+.benefits-section {
+  text-align: center;
+  background-color: #F5F5F5;
+  padding: 50px 0;
+}
+.benefits-section .container .benefits {
+  display: grid;
+  gap: 24px;
+}
+.benefits-section .container .benefits .benefit {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.offer-call-to-action {
+  background-color: #263238;
+  color: white;
+  padding: 50px 20px;
+}
+
+.question {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+
+.question-title p {
+  margin-bottom: 0;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-1);
+}
+
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transform: all 0.3s;
+}
+
+.question-btn:hover {
+  transform: rotate(90deg);
+}
+
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.question-text p {
+  margin-bottom: 0;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+
+.show-text .question-text {
+  display: block;
+  transition: all 0.3s;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+.action-from {
+  padding: 50px 20px;
+  position: relative;
+  z-index: 5;
+}
+.action-from .container {
+  background-color: #263238;
+  border-radius: 10px;
+  color: white;
+}
+.action-from .container .col-left {
+  padding: 20px;
+}
+.action-from .container .col-left span {
+  font-weight: bold;
+}
+.action-from .container .col-right {
+  text-align: center;
+  padding: 20px;
+}
+
+.elipse {
+  background: url("/static/img/offer/Ellipse 1.png");
+  background-position-x: center;
+  height: 400px;
+  margin-top: -400px;
+}
+
+footer {
+  background-color: #3fa6f0;
+  color: white;
+}
+footer .container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 780px) {
+  .container {
+    width: 80vw;
+  }
+  .section-intro {
+    margin: 0 20%;
+  }
+  nav {
+    background-color: #263238;
+    color: white;
+    border-radius: 10px;
+    height: 62px;
+  }
+  nav ul {
+    margin-top: -5px;
+  }
+  nav ul li a {
+    background-color: transparent;
+    color: white;
+  }
+  nav ul li .get-in-touch {
+    padding: 0;
+  }
+  nav ul li .get-in-touch .contact-btn {
+    margin-top: 5px;
+    padding: 20px 35px;
+    border-radius: 10px;
+  }
+  .promotion .container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .promotion .container .col-left {
+    background: url("/static/img/offer/Elements.png");
+    background-position-x: left;
+    background-position-y: bottom;
+    background-size: contain;
+    padding-top: 150px;
+    width: 40%;
+    background-color: transparent;
+    color: #263238;
+    text-align: start;
+  }
+  .promotion .container .col-right {
+    width: 60%;
+  }
+  .features .container .features-grid {
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-items: center;
+  }
+  .necessities-section .container .necessities {
+    margin-top: 50px;
+  }
+  .necessities-section .container .necessities .necessity {
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+  }
+  .necessities-section .container .necessities .necessity .col-left {
+    width: 50%;
+    text-align: start;
+  }
+  .necessities-section .container .necessities .necessity .col-right {
+    text-align: end;
+  }
+  .necessities-section .container .necessities .necessity .col-right img {
+    width: 80%;
+  }
+  .necessities-section .container .necessities .experience, .necessities-section .container .necessities .seo {
+    flex-direction: row-reverse;
+  }
+  .necessities-section .container .necessities .experience .col-right, .necessities-section .container .necessities .seo .col-right {
+    text-align: start;
+  }
+  .necessities-section .container .necessities .experience, .necessities-section .container .necessities .mobile, .necessities-section .container .necessities .seo, .necessities-section .container .necessities .impact {
+    margin-top: -150px;
+  }
+  .benefits-section .benefits {
+    margin-top: 50px;
+    grid-template-columns: 49% 49%;
+  }
+  .benefits-section .benefits .customers {
+    background-color: #3fa6f0;
+  }
+  .benefits-section .benefits .customers:hover {
+    background-color: #263238;
+  }
+  .benefits-section .benefits .credibility {
+    background-color: #263238;
+  }
+  .benefits-section .benefits .credibility:hover {
+    background-color: #3fa6f0;
+    color: white;
+  }
+  .offer-call-to-action {
+    background-color: transparent;
+  }
+  .offer-call-to-action .container {
+    background-color: #263238;
+    padding: 100px;
+    text-align: center;
+  }
+  .offer-call-to-action .container p {
+    margin-bottom: 30px;
+  }
+  .action-from {
+    padding: 0;
+  }
+  .action-from .container {
+    display: flex;
+    padding: 50px;
+  }
+  .action-from .container .col-left {
+    width: 50%;
+  }
+  .action-from .container .col-right {
+    width: 50%;
+    text-align: start;
+  }
+}/*# sourceMappingURL=offer.css.map */

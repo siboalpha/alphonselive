@@ -1,244 +1,560 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
 {% load static %}
-{% block content %}
-<section class="offer-section">
-    <div class="container">
-        <div class="left-col">
-            <h1>A complete website for $150</h1>
-            <p> Suitable for businesses or individuals. No additional costs. I will design it,
-                add your content, buy you a domain name, host it for a year.
-                All that for free
-            </p>
-            <a href="#submit-form" class="cta">Get in now</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'img/Alphonse-Favicon-1.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/offer.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/54c10e37be.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="/"><img src="{% static '/img/offer/Alphonse logo dark.png' %}" alt="" /></a>
         </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#Features">Features</a></li>
+            <li><a href="#Necessities">Necessities</a></li>
+            <li><a href="#Benefits">Benefits</a></li>
+            <li><a href="#FAQs">FAQs</a></li>
+            <li>
+              <a class="get-in-touch" href="#form"
+                ><button class="contact-btn">Get yours</button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 
-        <div class="right-col">
-            <img src="{% static 'img/static website.svg' %}" alt="">
+    <section class="promotion">
+      <div class="container">
+        <div class="col-left">
+          <h1 class="promo-heading">A professional website for free</h1>
+          <p>
+            Hello, my name is Alphonse SIBOMANA, and I am a web developer. I am
+            giving away 100 websites for free. Your Heard it, for free. All you
+            have to pay is your domain name and hosting, if you don’t have any!
+          </p>
+          <a href="#form">
+            <button class="offer-button light-blue">Claim your free website</button>
+          </a>
         </div>
-
-    </div>
-</section>
-
-<section class="benefits">
-    <div class="container">
-        <h2>Value of more than $500 for just $150</h2>
-        <p>You would normally hire a developer for more than $500 to give you the exact same quality,
-           and services that I am offering you. No need for hasling loooking for a designer, a developer and an admin. All that for $150
-        </p>
-        <div class="benefits-content">
-            <div class="benefit-card visibility">
-                <div class="left-col text-col">
-                    <h4>Increase your visibility.</h4>
-                    <p>
-                        Use this website to put your business or yourself out there,
-                        so that people who are interested in your products or services may see you.
-                        Publish your products or services for the world to see what you offer
-                    </p>
-                </div>
-                <div class="right-col">
-                    <img src="{% static 'img/undraw_web_development_0l6v.svg' %}" alt="Business credibility">
-                </div>
-            </div>
-            <div class="benefit-card customers">
-                <div class="left-col text-col">
-                    <h4>Get new customers</h4>
-                    <p>
-                        Use this website to attract new customers to your business.
-                        You can share the link on social media platforms and promote it,
-                        or share it with your friends and family.
-                    </p>
-                </div>
-                <div class="right-col">
-                    <img src="{% static 'img/undraw_check_boxes_re_v40f.svg' %}" alt="Business credibility">
-                </div>
-            </div>
-
-            <div class="benefit-card credibility">
-                <div class="left-col">
-                    <img src="{% static 'img/undraw_order_a_car_-3-tww.svg' %}" alt="Business credibility">
-                </div>
-                <div class="right-col text-col">
-                    <h4>Business Credibility</h4>
-                    <p>
-                        A business with a website or a person with a website is more recognized and
-                        respected to be able to support customers or provide
-                        useful information very easily.
-                    </p>
-                </div>
-            </div>
+        <div class="col-right">
+          <img src="{% static '/img/offer/Website Creator-bro 1.png' %}" alt="" />
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="cta-section">
-    <div class="container">
-        <h2>
-            I am offering this to a limited number of people. Grab it before I close the deal
-        </h2>
+    <section class="features" id="Features">
+      <div class="container">
+        <h2 class="offer-sub-heading">Features</h2>
+        <h1 class="offer-title">What will your webise have?</h1>
         <p>
-            I will be charging $500 for a professional simple website like this…
-            so take this chance and save that. No hidden charges.
-            Domain name and hosting will be yours. And you will have full accress to them.
+          My designand developent appraoch to this webste have the most
+          requested and nessary features. Every feature from introduction to
+          contact form.
         </p>
-        <a href="#submit-form" class="cta">
-            Claim yours right now
-        </a>
-    </div>
-</section>
 
-<section class="qna">
+        <div class="features-grid">
+          <div class="feature">
+            <h4 class="feature-offer-title">Navigation</h4>
+            <p>
+              A handifull and easy to use navigation. It cointains an easy way
+              to get to any section on the page
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">Hero section</h4>
+            <p>
+              a ntroduction section. That has a warm welcome to your clients or
+              an selling value proposition for you products
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">About section</h4>
+            <p>
+              This tells clients who you are and your mission. This section is
+              vital, some clients wants to know you before they buy
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">Services section</h4>
+            <p>
+              This is the section that showcase your products or service. It
+              contains all general or specific info about your offer
+            </p>
+          </div>
+          <div class="feature">
+            <h4 class="feature-offer-title">Testimonial section</h4>
+            <p>
+              Social proof is important for your marketing. This section has
+              tesimonies from you clients or feedback.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">Partners section</h4>
+            <p>
+              If you have partners that may be recorganized, this section is the best way to show case their brand.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">Call to action</h4>
+            <p>
+              After showcasing your products, you need customers to buy or
+              subscribe. This engourages them to so
+            </p>
+          </div>
+
+          <div class="feature">
+            <h4 class="feature-offer-title">Contact section</h4>
+            <p>
+              And finally, a section to give contact details of yor business to
+              your client, if they want to buy or need more clarifications
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="necessities-section" id="Necessities">
+      <div class="container">
+        <h2 class="offer-sub-heading">Necessities</h2>
+        <h1 class="offer-title">Every thing you need for a professional website</h1>
+        <p class="section-intro">
+          Let’s be real, text and images on the website are important, but more
+          needs to be done for your website to serve you and your clients. Here
+          is everything that will be taken into consideratiration while designing
+          this website.
+        </p>
+
+        <div class="necessities">
+          <div class="necessity purpose">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Purpose</h1>
+              <p>
+                I carefully listen to your main reason why you want this website
+                in first place. Being; attracting new customer, selling
+                products, awareness, ets. Then I craft this website based on
+                your needs and purpose.
+              </p>
+              <a href="#form">
+                <button class="offer-button dark-blue" >Claim your website now</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Goal-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="necessity experience">
+            <div class="col-left">
+              <h1 class="nec-offer-title">User experience</h1>
+              <p>
+                How your customers will experience this website is one of my
+                main considaration. The design, colors fonts and event
+                navigation in general, is crafted to deliver the best user
+                experience as possible.
+              </p>
+              <a href="#form">
+                <button class="offer-button dark-blue">Claim your website now</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Mobile UX-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity mobile">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Mobile friendly</h1>
+              <p>
+                These days, more people browse using their spartphones. All
+                images, fonts and design is mobile friendly. Meaning; your
+                clients will have optimal experience while brousing you website
+                using ther phone.
+              </p>
+              <a href="#form">
+                <button class="offer-button dark-blue">Claim your website now</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Mobile UX-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity seo">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Search engine optimized</h1>
+              <p>
+                To get more out of google, bing and other search engines, this
+                website is optimised to let your clients find you by simply
+                typing your business or product name in those search engines
+              </p>
+              <a href="#form">
+                <button class="offer-button dark-blue">Claim your website now</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/SEO-pana 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity impact">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Impact</h1>
+              <p>
+                And finally, we’ll define your product or service impact and
+                create imagery and content around it, to let your clients enjoy
+                your online profile as well as physical profile. At the end of
+                the day, you want your product to bring good to your clients
+              </p>
+              <a href="#form">
+                <button class="offer-button dark-blue">Claim your website now</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/People flying-cuate 1.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section" id="Benefits">
+      <div class="container">
+        <h2 class="offer-sub-heading">Benefits</h2>
+        <h1 class="offer-title">What will you gain from owning this website</h1>
+        <p class="section-intro">
+          This is a value of more than $500 you are getting for free. Apart from
+          that, this website will benefit you on many ways according to your
+          business or personal needs
+        </p>
+        <div class="benefits">
+          <div class="benefit dark-blue">
+            <h4 class="sub-offer-title">Save money</h4>
+            <p>
+                Your would spend more than $500 to hire designer, a developer and everything else. All of hard work is done for you here for free. All you have to do is provide content, and you’re good to go
+            </p>
+        </div>
+        <div class="benefit light-blue">
+            <h4 class="sub-offer-title">Increase your visibility</h4>
+            <p>
+                Use this website to put your business or yourself out there, so that people who are interested in your products or services may see you. Publish your products or services for the world to see what you offer            </p>
+        </div>
+        <div class="benefit dark-blue customers">
+            <h4 class="sub-offer-title">Get new customers</h4>
+            <p>
+                Use this website to attract new customers to your business. You can share the link on social media platforms and promote it, or share it with your friends and family.             </p>
+        </div>
+        <div class="benefit light-blue credibility">
+            <h4 class="sub-offer-title">Business credibility</h4>
+            <p>
+                A business with a website or a person with a website is more recognized and respected to be able to support customers or provide useful information very easily.             </p>
+        </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="offer-call-to-action">
+        <div class="container">
+            <h1 class="offer-title">Claim your website now</h1>
+            <p class="section-intro">
+                A you’re reading this now, more people are reading this too. 100 is a small number,
+                so make sure you claim your befire this promotion ends.
+            </p>
+            <a href="#form">
+                <button class="offer-button light-blue">Get yours now</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="faq-section" id="FAQs">
+        <div class="container">
+          <h2 class="offer-sub-heading">Frequently asked question</h2>
+            <h1 class="offer-title">
+                You might be wondering...
+            </h1>
+            <section class="questions">
+                <!-- questions -->
+                <div class="section-center">
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What is a domain name and hosting?</p>
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        Domain name is the address to your website. Example (google.com, apple.com). A professional domain name costs around $13. Hosting is the storage for your website. All files(Texts and images) are stored there
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What else will I have to pay?</p>
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        Nothing. As i stated before, this website is free, so you don’t have to pay anything.
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What If I want more?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        LIt’s no problem. I am open to discussing how we can arrange and add feature or section that you want.
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                   <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What technologies this website is but on?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        This is website is built on the most advanced and clean technologies. The visual part is built in HTML Css and Javascript. The logic part is built in python. This gives it power, security and maximum customization.                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>How log does it take to get my website online?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p> 
+                        After submitting content(Images and text) it takes me three days to give you the final version. The rest depends on you feedback period.                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>How am I going to get my website online?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        I’ll do it for you. Every hard work is done for you, so that you can focus on how to get traffic to this website.                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>After getting the website, What is next?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        I am writing a bunch of articles on how to get the most value from your website. You can choose to receive those articles, or get references from online.                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>How and I going to pay foresting and domain name?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        I’ll host the website for you, and help you find a professional domain name for you website, and help you with transaction.                    </div>
+                  </article>
+                  <!-- end of single question -->
+              </section>
+        </div>
+    </section>
+
+    <section class="offer-call-to-action">
+      <div class="container">
+        <h1 class="offer-title">Claim your website now</h1>
+          <p class="section-intro">
+              A you’re reading this now, more people are reading this too. 100 is a small number,
+              so make sure you claim your befire this promotion ends.
+          </p>
+          <a href="#form">
+              <button class="offer-button light-blue">Get yours now</button>
+          </a>
+      </div>
+  </section>
+
+  <section class="action-from" id="form">
     <div class="container">
-        <h2>
-            You may be wondering,
-        </h2>
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>Do you need this website?</h4>
-                </span>
+      <div class="col-left">
+        <h1 class="title">
+          Fill the form
+        </h1>
+        <p>Fill the form with with relavant information, that’s going to help me understand your business and the king of a website you want.
+        </p>
+        <p><span>Domain name</span> It is an adress to your website. Example apple.com</p>
+        <p><span>Hosting</span> It is where your website files are sotred for visitors to find them. </p>
+      </div>
+      <div class="col-right">
+        <form action="" method="POST" class="appear">
+            {% csrf_token %}
+            <div class="form-elements">
+                <div class="half-form-element">
+                    {{form.first_name}}
+                </div>
+                <div class="half-form-element">
+                    {{form.last_name}}
+                </div>
             </div>
-            <div class="answer">
-                Of course you do. Having a website can attract new potential clients.
-                A website will enable customers to see what your brand
-                is about while learning about your products and/or services. It adds credibility to your business.
-                You’re in control, and it is inexpensive and allows for wider reach. Fill the from
+            <div class="form-elements">
+                <div class="half-form-element">
+                    {{form.email}}
+                </div>
+                <div class="half-form-element">
+                    {{form.phone_number}}
+                </div>
             </div>
-        </div>
-
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>
-                        How am I going to get my websites?</h4>
-                </span>
+            <div class="form-elements">
+                <div class="full-form-element">
+                    {{form.details}}
+                </div>
             </div>
-            <div class="answer">
-                <p>
-                   I will try my best to deliver in 3 days. If you're in hurry, we can talk about how I can deliver it before that time
-                </p>
+            <div class="captcha">
+                {{form.captcha}}
             </div>
-        </div>
-
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>When I get my website, what's next?</h4>
-                </span>
+            <div class="form-elements">
+                <div class="half-form-element">
+                    <input class="cta offer-button light-blue" type="submit" value="Submit">
+                </div>
             </div>
-            <div class="answer">
-                <p>
-                    The next thing to do of course is drive traffic to it. I have tons of recomendations related to marketing your website, and I'' share them to you for free'
-                </p>
-            </div>
-        </div>
-
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>How am I going to pay for hosting and domain name?</h4>
-                </span>
-            </div>
-            <div class="answer">
-                <p>
-                    I will buy a server for you, set it up and hand over it to you. The server is custom, so you will have full access to your project
-                </p>
-            </div>
-        </div>
-
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>What else will I pay after this?</h4>
-                </span>
-            </div>
-            <div class="answer">
-                <p>
-                    Nothing, you will pay for the hosting and domain name next year! Did you get that? Next Year.
-                </p>
-            </div>
-        </div>
-
-        <div class="question">
-            <div class="question-title">
-                <span> <i class="far fa-question-circle"></i></span> <span>
-                    <h4>After getting my website, what else can I get?</h4>
-                </span>
-            </div>
-            <div class="answer">
-                <p>Well, it will depend on your goals. I will try to publish articles about how I think you can make
-                    your website profitable.</p>
-            </div>
-        </div>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
+  <section class="elipse"></section>
 
-<section class="container about-me" id="about">
-    <div class="about-text">
-        <h4 class="sub-heading">About me</h4>
-        <h4 class="section-intro">I am the best and affordable and enthusiastic web designer, with a rich experience
-            of over 4 years in website design industry.</h4>
-        <div class="about-content">
-            <div class="left-col">
-                <h4 class="sub-heading">
-                    I DESIGN PROFESSIONAL & PROFITABLE WEBSITES
-                </h4>
-                <p>
-                    With years of experience in graphic and web design I have mastered the skills of understanding
-                    client requirements according to the latest trends. I have worked with businesses from different
-                    niches so you can rely on me for yours. Having worked on various projects that are already live,
-                    I can help you with the best possible suggestions and ideas that we can proceed with. With me,
-                    you aren’t forced to accept anything. I give you a variety of options we can work on together.
-                </p>
-                <a href="#submit-form">
-                    <button class="cta">
-                        Get yours now
-                    </button>
-                </a>
-            </div>
-            <div class="right-col">
-                <img src="{% static 'img/Ineza-Couture.jpg' %}" alt="">
-                <img src="{% static 'img/Imbonizarwo.jpg' %}" alt="">
-            </div>
-        </div>
+  <footer>
+    <div class="copyright container">
+        <i class='far fa-copyright'></i>
+        <p>Alphonse SIBOMANA {% now " Y " %}</p>
     </div>
-</section>
 
-<section class="offer-form" id="submit-form">
-    <div class="container">
-        <h4 class="sub-heading">Are you interested?</h4>
-        <h4 class="section-intro"> Let's work together, fill the form with basic information, and let's beggin your
-            project</h4>
-        <div class="offer-form-content">
-            <form action="" method="POST">
-                {% csrf_token %}
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        {{form.first_name}}
-                    </div>
-                    <div class="half-form-element">
-                        {{form.last_name}}
-                    </div>
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        {{form.email}}
-                    </div>
-                    <div class="half-form-element">
-                        {{form.phone_number}}
-                    </div>
-                </div>
-                <div class="form-elements">
-                    <div class="full-form-element">
-                        {{form.website_details}}
-                    </div>
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        <input class="cta" type="submit" value="Submit">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-{% endblock %}
+</footer>
+  <script src="{% static 'js/offer.js' %}"></script>
+  </body>
+</html>

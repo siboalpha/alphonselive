@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
 from website.models import Quotation, Project
-from .forms import ContactForm, QuotationForm, specialOfferLeadsForm
+from .forms import ContactForm, FreeWebsiteForm, QuotationForm, specialOfferLeadsForm
 from django.core.mail import EmailMessage
 from core import settings
 from django.template.loader import render_to_string
@@ -43,13 +43,15 @@ def index(request):
     return render(request, 'index.html', context)
 
 def offer(request):
-    form = specialOfferLeadsForm()
+    form = FreeWebsiteForm()
     context = {'form': form}
     if request.method == 'POST':
-        form = specialOfferLeadsForm(request.POST)
+        form = FreeWebsiteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('thank-you')
+            return redirect('https://calendly.com/sibo-alphonsee/client-initial-metting')
+        else:
+            return HttpResponse('There was an error')
     return render(request, 'offer.html', context)
 
 def thankYou(request):

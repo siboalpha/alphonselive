@@ -18,6 +18,17 @@ class contactFormMessage(models.Model):
     def __str__(self):
         return self.first_name
 
+class freeWebsiteLead(models.Model):
+    date_sent = models.DateTimeField(default=timezone.now, null=True)
+    first_name = models.CharField(max_length=40)
+    last_name = models.CharField(max_length=40)
+    email = models.EmailField(max_length=40)
+    phone_number = models.CharField(max_length=40)
+    details = models.TextField(max_length=500)
+
+    def __str__(self):
+        return self.first_name
+
 class specialOfferLeads(models.Model):
     date_sent = models.DateTimeField(default=timezone.now, null=True)
     first_name = models.CharField(max_length=40)
