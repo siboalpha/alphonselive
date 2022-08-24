@@ -95,7 +95,7 @@ class Project (models.Model):
         return self.title
 
     def short_description(self):
-        return self.details[0:100]
+        return self.details[0:100] + "..."
 
     class Meta:
         ordering = ['id']
