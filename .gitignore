@@ -2,3 +2,4 @@
 venv/
 core/.env
 db.sqlite3
+blog/

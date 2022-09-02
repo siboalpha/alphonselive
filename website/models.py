@@ -1,5 +1,6 @@
 from distutils.command.upload import upload
 from email import message
+from queue import Empty
 from django.db import models
 from django.forms import model_to_dict
 from django.urls import reverse
@@ -24,6 +25,7 @@ class freeWebsiteLead(models.Model):
     last_name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
     phone_number = models.CharField(max_length=40)
+    whatsapp_number = models.CharField(max_length=40, null=True)
     details = models.TextField(max_length=500)
 
     def __str__(self):

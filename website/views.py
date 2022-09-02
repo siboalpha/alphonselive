@@ -49,7 +49,7 @@ def offer(request):
         form = FreeWebsiteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('https://calendly.com/sibo-alphonsee/client-initial-metting')
+            return redirect('thank-you')
         else:
             return HttpResponse('There was an error')
     return render(request, 'offer.html', context)
