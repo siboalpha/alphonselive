@@ -47,7 +47,7 @@ RECAPTCHA_PRIVATE_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
 
 INSTALLED_APPS = [
     'website',
-    'blog',
+    #'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
