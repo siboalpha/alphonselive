@@ -20,13 +20,26 @@ class contactFormMessage(models.Model):
         return self.first_name
 
 class freeWebsiteLead(models.Model):
+    contacted = 'Contacted'
+    not_contacted = 'Not contacted'
+    not_paid = 'Not paid'
+    payment_pending = 'Payment_pending'
+
+    STATUS_CHOICES = [
+        (contacted, 'Contacted'),
+        (not_contacted, 'Not contacted'),
+        (not_paid, 'Not paid'),
+        (payment_pending, 'Payment_pending'),
+    ]
     date_sent = models.DateTimeField(default=timezone.now, null=True)
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     email = models.EmailField(max_length=40)
     phone_number = models.CharField(max_length=40)
     whatsapp_number = models.CharField(max_length=40, null=True)
+    status = models.CharField(max_length=255, choices=STATUS_CHOICES, default=not_contacted, null=True)
     details = models.TextField(max_length=500)
+
 
     def __str__(self):
         return self.first_name
