@@ -8,7 +8,7 @@ class contactFormMessageAdmin(admin.ModelAdmin):
 
 @admin.register(models.freeWebsiteLead)
 class freeWebsiteLeadLeadAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
+    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent", "status")
 
 @admin.register(models.Quotation)
 class QuotationAdmin(admin.ModelAdmin):
