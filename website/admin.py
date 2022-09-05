@@ -1,4 +1,5 @@
 from django.contrib import admin
+from import_export.admin import ImportExportActionModelAdmin
 from django.urls import clear_script_prefix
 from . import models
 # Register your models here.
@@ -7,7 +8,7 @@ class contactFormMessageAdmin(admin.ModelAdmin):
     list_display = ("first_name", "last_name", "email", "phone_number", "date_sent")
 
 @admin.register(models.freeWebsiteLead)
-class freeWebsiteLeadLeadAdmin(admin.ModelAdmin):
+class freeWebsiteLeadLeadAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
     list_display = ("first_name", "last_name", "email", "phone_number", "date_sent", "status")
 
 @admin.register(models.Quotation)
