@@ -1,4 +1,4 @@
-$content-width: 80vw;
+$content-width: 1200px;
 $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: white;
@@ -542,6 +542,7 @@ footer {
     }
 
     .promotion {
+        padding-bottom: 0;
         .container {
             flex-direction: row;
             align-items: center;
@@ -571,6 +572,7 @@ footer {
         }
     }
     .necessities-section {
+        padding-top: 0;
         .container {
     
             .necessities {
@@ -627,7 +629,7 @@ footer {
         background-color: transparent;
         .container {
             background-color: #263238;
-            padding: 100px;
+            padding: 100px 0;
             text-align: center;
             p {
                 margin-bottom: 30px;
@@ -638,9 +640,10 @@ footer {
         padding: 0;
         .container {
             display: flex;
-            padding: 50px;
+            padding: 50px 0;
             .col-left {
                 width: 50%;
+                padding: 50px;
             }
             .col-right {
                 width: 50%;

@@ -54,6 +54,29 @@ def offer(request):
             return HttpResponse('There was an error')
     return render(request, 'offer.html', context)
 
+def offer500(request):
+    form = QuotationForm()
+    context = {'form': form}
+    return render(request, '500-website.html', context)
+
+def thankYou(request):
+    return render(request, 'thank-you.html')
+
+
+def quotationUpdate(request,pk):
+    form = QuotationForm()
+    quotation = Quotation.objects.get(id=pk)
+    context = {'form': form}
+    if request.method == 'POST':
+        form = QuotationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            instance = form.save()
+            return redirect('quotation-results.html', pk = instance)
+        else:
+            return HttpResponse('There was an error')
+    return render(request, 'quotation-update.html', context)
+
 def thankYou(request):
     return render(request, 'thank-you.html')
 
@@ -69,7 +92,7 @@ def quotation(request):
                 hosting_value = 60
                 domain_name_value = 12
                 web_design_value = 50
-                web_development_value = 200
+                web_development_value = 316
                 seo_value = 0
                 technical_suport_value = 0
 
@@ -84,14 +107,14 @@ def quotation(request):
                 if form.cleaned_data['technical_suport'] == 'Yes':
                     technical_suport_value = 12
                 if form.cleaned_data['seo'] == 'Yes':
-                    seo_value = 100
+                    seo_value = 50
 
 
             elif website_category_input == 'Standard Website':
                 hosting_value = 40
                 domain_name_value = 20
                 web_design_value = 150
-                web_development_value = 300
+                web_development_value = 500
                 seo_value = 0
                 technical_suport_value = 0
 
@@ -112,8 +135,8 @@ def quotation(request):
             elif website_category_input == 'Advanced Website':
                 hosting_value = 300
                 domain_name_value = 100
-                web_design_value = 350
-                web_development_value = 900
+                web_design_value = 500
+                web_development_value = 5000
                 seo_value = 0
                 technical_suport_value = 0
             

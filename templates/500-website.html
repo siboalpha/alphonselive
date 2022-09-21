@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'img/Alphonse-Favicon-1.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/offer.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/54c10e37be.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="/"><img src="{% static '/img/offer/Alphonse logo dark.png' %}" alt="" /></a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li><a href="#Necessities">Necessities</a></li>
+            <li><a href="#FAQs">FAQs</a></li>
+            <li>
+              <a class="get-in-touch" href="{% url 'quotation' %}"
+                ><button class="contact-btn">Get yours</button>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <section class="promotion">
+      <div class="container">
+        <div class="col-left appear">
+          <h1 class="promo-heading">A professional website starting from $500</h1>
+          <p>
+            Hello, my name is Alphonse SIBOMANA, and I am a web developer. I will desing and 
+            develop a website for you starting from $500, no hidded costs.
+            Design | Developement | Deployment, all included
+          </p>
+          <a href="{% url 'quotation' %}">
+            <button class="offer-button light-blue">Get quotation</button>
+          </a>
+        </div>
+        <div class="col-right">
+          <img src="{% static '/img/offer/Website Creator-bro 1.png' %}" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="necessities-section" id="Necessities">
+      <div class="container">
+        <h2 class="offer-sub-heading">Necessities</h2>
+        <h1 class="offer-title">Every thing you need for a professional website</h1>
+        <p class="section-intro">
+          Let’s be real, text and images on the website are important, but more
+          needs to be done for your website to serve you and your clients. Here
+          is everything that will be taken into consideratiration while designing
+          this website.
+        </p>
+
+        <div class="necessities">
+          <div class="necessity purpose">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Purpose</h1>
+              <p>
+                I carefully listen to your main reason why you want this website
+                in first place. Being; attracting new customer, selling
+                products, awareness, ets. Then I craft this website based on
+                your needs and purpose.
+              </p>
+              <a href="{% url 'quotation' %}">
+                <button class="offer-button dark-blue" >Get a quotation</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Goal-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="necessity experience">
+            <div class="col-left">
+              <h1 class="nec-offer-title">User experience</h1>
+              <p>
+                How your customers will experience this website is one of my
+                main considaration. The design, colors fonts and event
+                navigation in general, is crafted to deliver the best user
+                experience as possible.
+              </p>
+              <a href="{% url 'quotation' %}">
+                <button class="offer-button dark-blue">Get a quotion</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Mobile UX-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity mobile">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Mobile friendly</h1>
+              <p>
+                These days, more people browse using their spartphones. All
+                images, fonts and design is mobile friendly. Meaning; your
+                clients will have optimal experience while brousing you website
+                using ther phone.
+              </p>
+              <a href="{% url 'quotation' %}">
+                <button class="offer-button dark-blue">Get a quotion</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/Mobile UX-bro 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity seo">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Search engine optimized</h1>
+              <p>
+                To get more out of google, bing and other search engines, this
+                website is optimised to let your clients find you by simply
+                typing your business or product name in those search engines
+              </p>
+              <a href="{% url 'quotation' %}">
+                <button class="offer-button dark-blue">Get a quotion</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/SEO-pana 1.png' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="necessity impact">
+            <div class="col-left">
+              <h1 class="nec-offer-title">Impact</h1>
+              <p>
+                And finally, we’ll define your product or service impact and
+                create imagery and content around it, to let your clients enjoy
+                your online profile as well as physical profile. At the end of
+                the day, you want your product to bring good to your clients
+              </p>
+              <a href="{% url 'quotation' %}">
+                <button class="offer-button dark-blue">Get a quotion</button>
+              </a>
+            </div>
+            <div class="col-right">
+              <img src="{% static '/img/offer/People flying-cuate 1.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer-call-to-action">
+        <div class="container">
+            <h1 class="offer-title">A limited offer</h1>
+            <p class="section-intro">
+                As you’re reading this now, more people are reading this too. And I am only accepting 10 clients.
+                So you better get your quotation as soon as now!
+            </p>
+            <a href="{% url 'quotation' %}">
+                <button class="offer-button light-blue">Get yours now</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="faq-section" id="FAQs">
+        <div class="container">
+          <h2 class="offer-sub-heading">Frequently asked question</h2>
+            <h1 class="offer-title">
+                You might be wondering...
+            </h1>
+            <section class="questions">
+                <!-- questions -->
+                <div class="section-center">
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>Is domain name and hosting required?</p>
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        No, if you have a domain name or/ and hosting, you don't need to pay for them. On quotation form, you
+                        choose what you don't have.
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What technologies do you use?</p>
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        My dev stack is: Html, Csss and Javascript for frontend and Python, Django for backend.
+                        My hosting recomendations are Railways and Linode, they are great services.
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>What If I want more?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        It’s no problem. I am open to discussing how we can arrange and add features, sections or pages that you want.
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                   <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>How I am going to pay?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p>
+                        After signing an agreement, like others, I require 50% of the total budget to start the work. More details
+                        depend on the contract. I accept all major forms of payment and deposits
+                      </p>
+                    </div>
+                  </article>
+                  <!-- end of single question -->
+
+                  <!-- single question -->
+                  <article class="question">
+                    <!-- question title -->
+                    <div class="question-title">
+                      <p>How log does it take to get my website online?
+                      </p>
+                      <!-- button -->
+                      <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                          <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                          <i class="far fa-minus-square"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- question text -->
+                    <div class="question-text">
+                      <p> 
+                        Developing a website takes a time, so it depends on the size of the website, features and how
+                        long it takes a client to provide feedback.
+                      </p>
+                       </div>
+                  </article>
+                  <!-- end of single question -->
+              </section>
+        </div>
+    </section>
+
+    <section class="offer-call-to-action">
+      <div class="container">
+        <h1 class="offer-title">Get a quotion</h1>
+          <p class="section-intro">
+              I am offering this during this week only. I will work with people who will have agreed 
+              and paid the initial deposit. Get a quotation now and let's work on project.
+          </p>
+          <a href="{% url 'quotation' %}">
+              <button class="offer-button light-blue">Get yours now</button>
+          </a>
+      </div>
+  </section>
+  <section class="elipse"></section>
+
+  <footer>
+    <div class="copyright container">
+        <i class='far fa-copyright'></i>
+        <p>Alphonse SIBOMANA {% now " Y " %}</p>
+    </div>
+
+</footer>
+  <script src="{% static 'js/offer.js' %}"></script>
+  </body>
+</html>
