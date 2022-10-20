@@ -178,7 +178,8 @@ def quotation(request):
             form_total.quotation_total = total
             form.save()
             instance = form.save()
-            return redirect('quotation-results', pk=instance.pk)
+            #return redirect('quotation-results', pk=instance.pk)
+            return redirect('thank-you')
     return render(request, 'quotation.html', context)
 
 def quotationResults(request, pk):
