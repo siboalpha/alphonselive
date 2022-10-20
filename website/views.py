@@ -12,7 +12,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def index(request):
     all_projects = Project.objects.all()
-    paginaginated_projects = Paginator(all_projects, 4, allow_empty_first_page=True)
+    paginaginated_projects = Paginator(all_projects, 8, allow_empty_first_page=True)
     page_number = request.GET.get('page')
     projects = paginaginated_projects.get_page(page_number)
     form = ContactForm()
