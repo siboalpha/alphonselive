@@ -11,7 +11,7 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
-    all_projects = Project.objects.all()
+    all_projects = Project.objects.order_by("-completed_on")
     paginaginated_projects = Paginator(all_projects, 8, allow_empty_first_page=True)
     page_number = request.GET.get('page')
     projects = paginaginated_projects.get_page(page_number)
