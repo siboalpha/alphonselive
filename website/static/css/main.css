@@ -604,7 +604,7 @@ img {
   gap: 20px;
 }
 .portfolio .container .projects .project {
-  max-width: 380px;
+  width: 380px;
   position: relative;
   background-position: top;
   background-size: cover;
@@ -661,7 +661,7 @@ img {
     justify-content: center;
   }
   .portfolio .container .projects .project {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .quotation {
