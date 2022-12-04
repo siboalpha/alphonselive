@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>About Alphonse</title>
+</head>
+<body>
+
+    <section class="about">
+        <div class="container">
+            <div class="col-left">
+                <a class="page-link" href="{% url 'projects' %}">
+                    <span><img src="{% static '/img/about/arrows.svg' %}" alt=""></span> <p>View my past projects</p>
+                </a>
+                <div class="info">
+                    <div class="sub-heading"><span><img src="{% static '/img/about/one arrow.svg' %}" alt=""></span> Want to know a little bit about me?</div>
+                    <h1 class="heading">
+                        I am one of the best designers / developers you can get. With 4 
+                        years in the industry, I can take all project from concept.
+                    </h1>
+                </div>
+
+                <div class="buttons">
+                    <a href="{% url 'quotation' %}">
+                        <button>Get a quotation</button>
+                    </a>
+                    <a href="{% url 'projects' %}">
+                        <button class="btn-special">View my past projects >></button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-right">
+                <img class="img-mobile" src="{% static '/img/about/alphose sibomana.webp' %}" alt="">
+                <img class="img-desk" src="{% static '/img/about/vertopal 1.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <div class="about-container">
+                <div class="sub-heading">
+                    <span><img src="{% static '/img/about/one arrow.svg' %}" alt=""></span> <p>Want to know about my experience?  /</p>
+                </div>
+                <h1 class="heading">
+                    Since 2019, I’ve been developing my skills
+                    for me to serve clients who have with small
+                    or big proejcts. 
+                </h1>
+                <div class="skills">
+                    
+                    <div class="skill">
+                        <p class="sub-title">During 2019</p>
+                        <h1 class="title">Mostly designing in In Figma</h1>
+                        <p>I spent the entire year learning the basics of design
+                            and applying them in WordPress using Elementor.
+                        </p>
+
+                    </div>
+
+                    <div class="skill">
+                        <p class="sub-title">2020 - Now</p>
+                        <h1 class="title">Went full in Codding</h1>
+                        <p>
+                            I started to work on full stack projects. I'd take design, 
+                            front-end dev and backend dev. I'd also deploy all my projects
+
+                        </p>
+
+                    </div>
+                </div>
+                <a href="{% url 'projects' %}">
+                    <button class="btn-special">Would you like to see some cool projects I worked on? click here >></button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="technologies-section">
+        <div class="container">
+            <div class="about-container">
+                <div class="sub-heading">
+                    <span><img src="{% static '/img/about/arrows.svg' %}" alt=""></span> <p>Want to know the technologies I use  /</p>
+                </div>
+                <h1 class="heading">My technologies alow mw to take a project from a consept to an actual
+                    product without any third party tools
+                </h1>
+    
+                <div class="technologies">
+                    <div class="technology">
+                        <img src="{% static '/img/icons/figma.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="{% static '/img/icons/xd.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="{% static '/img/icons/html.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="{% static '/img/icons/js.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="{% static '/img/icons/python.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+
+                    <div class="technology">
+                        <img src="{% static '/img/icons/ps.webp' %}" alt="" class="icon">
+                        <p class="description">
+                            I use figma to made cool designs and prototypes
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>Single Project</title>
+</head>
+<body>
+    <section class="single-portfolio">
+        <div class="container">
+            <div class="col-left">
+                <a class="page-link" href="{% url 'projects' %}">
+                    <span><img src="{% static '/img/about/arrows.svg' %}" alt=""></span> <p>Back to projects</p>
+                </a>
+                <div class="portfolio-section">
+                    <h1 class="heading">Project name: {{my_project.title}}</h1>
+
+                    <h5>By: {{my_project.company}}</h5>
+                    <h6>Started on {{my_project.started_on}} | Completed on {{my_project.completed_on}}</h6>
+                    <p class="project-summary">
+                        {{my_project.details}}
+                    </p>
+                </div>
+    
+                <div class="portfolio-section-call-to-action">
+                    <h4 class="heading">Let’s work on your next project</h4>
+                    <p class="call-to-action">
+                        Are you planning to launch or redesign your website? My process is smooth and simple, 
+                        which makes your project delivery an incredeible experience for both of us. Click get a quotation, and let's make something amazing
+                    </p>
+                    <a href="{% url 'quotation' %}" class="cta">
+                        <button>Get a quotation</button>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="col-right">
+                <div class="desktop">
+                    <div class="content">
+                        <div class="screen" >
+                            <img src="{{my_project.project_image.url}}" alt="">
+                        </div>
+                    </div><!--content-->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

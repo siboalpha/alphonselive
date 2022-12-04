@@ -9,16 +9,17 @@ class contactFormMessageAdmin(admin.ModelAdmin):
 
 @admin.register(models.freeWebsiteLead)
 class freeWebsiteLeadLeadAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number", "date_sent", "status")
+    list_display = ("first_name", "email", "phone_number", "date_sent", "status")
 
 @admin.register(models.Quotation)
 class QuotationAdmin(admin.ModelAdmin):
-    list_display = ("first_name", "last_name", "email", "phone_number", "website_type", "quotation_total", "date_sent")
+    list_display = ("full_name", "email", "phone_number", "date_sent")
 
 
 @admin.register(models.Project)
 class ProjetAdmin(admin.ModelAdmin):
     list_display = ("title", "company", "started_on", "completed_on")
+    prepopulated_fields= {"slug": ("title",)}
 
 @admin.register(models.specialOfferLeads)
 class specialOfferLeadsAdmin(admin.ModelAdmin):

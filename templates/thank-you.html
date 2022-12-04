@@ -1,32 +1,44 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<section class="thank-you">
-    <div class="container">
-        <h1>
-            Thank you for your interest in working with me.
-        </h1>
-        <p>
-            Now, click Book a meeting to,  and choose date and time you'll be available to
-            discuss next steps like (content, design and payments)
-        </p>
-        <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/54c10e37be.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Thank you | Alphonse</title>
+</head>
+
+<body>
+    <section class="thank-you">
+        <div class="container">
+            <h1 class="heading">
+                Thank you for your interest in working with me.
+            </h1>
+            <p>
+                Please check your email for details about your project and more info.
+            </p>
+    
             <div class="contact-btn">
-            <a href="https://wa.me/250788449976">
-                <i class="fab fa-whatsapp"></i> <span> WhatsApp me</span>
-            </a>
-            <a href="sms:+250788449976">
-                <i class="fa fa-envelope"></i> <span> Text me</span>
-            </a>
-            <a href="mailto:sibo.alphonsee@gmail.com">
-                <i class="fas fa-envelope-open-text"></i> <span> Email me</span>
-            </a>
+                <a href="">
+                    <i class="fab fa-whatsapp"></i> <span> WhatsApp me</span>
+                </a>
+                <a href="">
+                    <i class="fa fa-envelope"></i> <span> Text me</span>
+                </a>
+                <a href="">
+                    <i class="fas fa-envelope-open-text"></i> <span> Email me</span>
+                </a>            
         </div>
-        -->
-        <div class="contact-btn">
-            <a href="https://calendly.com/sibo-alphonsee/client-initial-metting">
-                <i class="fab fa-whatsapp"></i> <span> Book a meeting</span>
-            </a>
-    </div>
-</section>
-{% endblock %}
+
+        <a href="/">
+            <button>Back to home</button>
+        </a>
+        </div>
+    </section>
+</body>
+
+</html>

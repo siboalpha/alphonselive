@@ -42,6 +42,20 @@ def index(request):
     context = {'form': form, 'projects':projects}
     return render(request, 'index.html', context)
 
+def about(request):
+    return render(request, 'about.html')
+
+def projects(request):
+    my_projects = Project.objects.all()
+
+    context = {'my_projects':my_projects}
+    return render(request, 'projects.html', context)
+
+def project(request, slug):
+    my_project = Project.objects.get(slug = slug)
+    context = {'my_project':my_project}
+    return render(request, 'project.html', context)
+
 def offer(request):
     form = FreeWebsiteForm()
     context = {'form': form}
@@ -87,98 +101,7 @@ def quotation(request):
     if request.method == 'POST':
         form = QuotationForm(request.POST)
         if form.is_valid():
-            website_category_input = form.cleaned_data['website_type']
-            if website_category_input == 'Basic Website':
-                hosting_value = 60
-                domain_name_value = 12
-                web_design_value = 50
-                web_development_value = 316
-                seo_value = 0
-                technical_suport_value = 0
-
-                if form.cleaned_data['hosting'] == 'Yes':
-                    hosting_value = 0
-                if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name_value = 0
-                if form.cleaned_data['web_design'] == 'Yes':
-                    web_design_value = 0
-                if form.cleaned_data['web_development'] == 'Yes':
-                    web_development_value = 0
-                if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport_value = 12
-                if form.cleaned_data['seo'] == 'Yes':
-                    seo_value = 50
-
-
-            elif website_category_input == 'Standard Website':
-                hosting_value = 40
-                domain_name_value = 20
-                web_design_value = 150
-                web_development_value = 500
-                seo_value = 0
-                technical_suport_value = 0
-
-                if form.cleaned_data['hosting'] == 'Yes':
-                    hosting_value = 0
-                if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name_value = 0
-                if form.cleaned_data['web_design'] == 'Yes':
-                    web_design_value = 0
-                if form.cleaned_data['web_development'] == 'Yes':
-                    web_development_value = 0
-                if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport_value = 112
-                if form.cleaned_data['seo'] == 'Yes':
-                    seo_value = 200
-
-
-            elif website_category_input == 'Advanced Website':
-                hosting_value = 300
-                domain_name_value = 100
-                web_design_value = 500
-                web_development_value = 5000
-                seo_value = 0
-                technical_suport_value = 0
-            
-                if form.cleaned_data['hosting'] == 'Yes':
-                    hosting_value = 0
-                if form.cleaned_data['domain_name'] == 'Yes':
-                    domain_name_value = 0
-                if form.cleaned_data['web_design'] == 'Yes':
-                    web_design_value = 0
-                if form.cleaned_data['web_development'] == 'Yes':
-                    web_development_value = 0
-                if form.cleaned_data['technical_suport'] == 'Yes':
-                    technical_suport_value = 212
-                if form.cleaned_data['seo'] == 'Yes':
-                    seo_value = 400
-            else: 
-                total = 0
-
-            total = hosting_value + domain_name_value + web_design_value + web_development_value + seo_value + technical_suport_value
-            domain_name = form.save(commit=False)
-            domain_name.domain_name_value = domain_name_value
-
-            hosting = form.save(commit=False)
-            hosting.hosting_value = hosting_value
-
-            web_design = form.save(commit=False)
-            web_design.web_design_value = web_design_value
-
-            web_development = form.save(commit=False)
-            web_development.web_development_value = web_development_value
-
-            seo = form.save(commit=False)
-            seo.seo_value = seo_value
-
-            technical_suport = form.save(commit=False)
-            technical_suport.technical_suport_value = technical_suport_value
-            
-            form_total = form.save(commit=False)
-            form_total.quotation_total = total
             form.save()
-            instance = form.save()
-            #return redirect('quotation-results', pk=instance.pk)
             return redirect('thank-you')
     return render(request, 'quotation.html', context)
 

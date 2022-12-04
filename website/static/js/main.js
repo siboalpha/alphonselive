@@ -1,53 +1,65 @@
-(function($) {
-  $(function() {
-    $('nav ul li > a:not(:only-child)').click(function(e) {
-      $(this)
-        .siblings('.nav-dropdown')
-        .slideToggle()
-      $('.nav-dropdown')
-        .not($(this).siblings())
-        .hide()
-      e.stopPropagation()
-    })
-    $('html').click(function() {
-      $('.nav-dropdown').hide()
-    })
-    // Toggle open and close nav styles on click
-    $('#nav-toggle').click(function() {
-      $('nav ul').slideToggle();
-    });
-    $('#nav-toggle').on('click', function() {
-      this.classList.toggle('active')
-    })
-  })
-})(jQuery)
-
-jQuery(function($){
-    var $navbar = $('.navigation')
-    $(window).scroll(function(event){
-        var $current = $(this).scrollTop();
-        if($current > 50){
-            $navbar.addClass('navigation-bar-black');
-        } else{
-            $navbar.removeClass('navigation-bar-black');
-        }
-    });
+jQuery(function ($) {
+  var $navbar = $('.navigation-bar')
+  $(window).scroll(function (event) {
+    var $current = $(this).scrollTop();
+    if ($current > 50) {
+      $navbar.addClass('navigation-bar-black');
+    } else {
+      $navbar.removeClass('navigation-bar-black');
+    }
+  });
 });
 
-//Animation
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
-const items = document.querySelectorAll('.appear');
-
-const active = function(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-        entry.target.classList.add('inview'); 
-        }else{
-            entry.target.classList.remove('inview'); 
-        }
+hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
     });
-}
-const io2 = new IntersectionObserver(active);
- for(let i=0; i < items.length; i++){
-    io2.observe(items[i]);
- }
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+// MULTI STEP FORM
+
+
+// COOKIES
+
+let popUp = document.getElementById("cookiePopup");
+//When user clicks the accept button
+document.getElementById("acceptCookie").addEventListener("click", () => {
+  //Create date object
+  let d = new Date();
+  //Increment the current time by 1 minute (cookie will expire after 1 minute)
+  d.setMinutes(2 + d.getMinutes());
+  //Create Cookie withname = myCookieName, value = thisIsMyCookie and expiry time=1 minute
+  document.cookie = "myCookieName=thisIsMyCookie; expires = " + d + ";";
+  //Hide the popup
+  popUp.classList.add("hide");
+  popUp.classList.remove("show");
+});
+//Check if cookie is already present
+const checkCookie = () => {
+  //Read the cookie and split on "="
+  let input = document.cookie.split("=");
+  //Check for our cookie
+  if (input[0] == "myCookieName") {
+    //Hide the popup
+    popUp.classList.add("hide");
+    popUp.classList.remove("show");
+  } else {
+    //Show the popup
+    popUp.classList.add("show");
+    popUp.classList.remove("hide");
+  }
+};
+//Check if cookie exists when page loads
+window.onload = () => {
+  setTimeout(() => {
+    checkCookie();
+  }, 2000);
+};

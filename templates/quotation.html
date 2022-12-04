@@ -1,111 +1,41 @@
-{% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<section class="quotation">
-    <div class="container">
-        <div class="left-col">
-            <h1 class="quotation-title">Quotation</h1>
-            <h4 class="quotation-desc"> Fill the form and click calculate, for you to see how much your project may cost
-            </h4>
-            <h1 class="quotation-note">
-                Note:
-            </h1>
-            <ol>
-                <li>
-                    <h4 class="note-title">Domain name</h4>
-                    <p class="note-content">Domain name is an address for your website. something that a user will will
-                        type in the brouswer to see your website.
-                    </p>
-                </li>
-
-                <li>
-                    <h4 class="note-title">Search Engine Optimization </h4>
-                    <p class="note-content">When we are developing a website, we do customizations
-                        so that it's quickly and easly found in google search
-                    </p>
-                </li>
-            </ol>
-            <p>If there is anything you don't understand, feel free to contact me, I'll explain it as simple as I
-                can. YOU CAN NOW START FILLING THE FORM</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>Quotation | Alphonse</title>
+</head>
+<body>
+    <section class="quotation">
+        <div class="container">
+            <div class="left-col">
+                <a class="page-link" href="{% url 'projects' %}">
+                    <span><img src="{% static '/img/about/arrows.svg' %}" alt=""></span> <p>View my past projects</p>
+                </a>
+                <div class="info">
+                    <div class="sub-heading">Fill the form with enough info about the website you need <span><img src="{% static '/img/about//arrow right.svg' %}" alt=""></span> </div>
+                    <h1 class="heading">
+                        On every project, I give 3 months of maintenance for free. Time, effor and care
+                        I invest in py clients' project, allow me to serve you to the maximum
+                    </h1>
+                </div>
+                <p>If there is anything you don't understand, feel free to get in touch with me, I'll answer any question that you have</p>
+            </div>
+            <div class="right-col">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.full_name}}
+                    {{form.phone_number}}
+                    {{form.email}}
+                    {{form.country}}
+                    {{form.notes}}
+                    <input type="submit" value="Request a proposal">
+                </form>
+            </div>
         </div>
-        <div class="right-col">
-            <form action="" method="POST">
-                {% csrf_token %}
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        {{form.first_name}}
-                    </div>
-                    <div class="half-form-element">
-                        {{form.last_name}} 
-                    </div>
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        {{form.email}} 
-                    </div>
-                    <div class="half-form-element">
-                        {{form.phone_number}}
-                        {{form.country}}
-                    </div>
-
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        <p>What website type you want?</p>
-                        {{form.website_type}}
-                    </div>
-                    <div class="half-form-element">
-                        <p>Do you have a domain name?</p>
-                        {{form.domain_name}}
-                    </div>
-
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        <p>Do you have a hosting service?</p>
-                        {{form.hosting}}
-                    </div>
-                    <div class="half-form-element">
-                        <p>Do you have a mockup?</p>
-                        {{form.web_design}}
-                    </div>
-
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        <p>Do you have website files?</p>
-                        {{form.web_development}}
-                    </div>
-                    <div class="half-form-element">
-                        <p>Do you need techinical support?</p>
-                        {{form.technical_suport}}
-                    </div>
-
-                </div>
-                <div class="form-elements">
-                    <div class="half-form-element">
-                        <p>Do you need SEO</p>
-                        {{form.seo}}
-                    </div>
-                </div>
-
-                <div class="form-elements">
-                    <div class="full-form-element">
-                        <p>Do you have any information that I can use as a starting point. Like the sate or the industy of
-                            your business or career</p>
-                        {{form.notes}}
-                    </div>
-                </div>
-
-                <div class="form-elements">
-                    <div class="form-elements">
-                        <div class="half-form-element">
-                            <input class="cta" type="submit" value="Submit">
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-{% endblock %}
+    </section>
+    <script src="{% static '/js/form.js' %}"></script>
+</body>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My past projects </title>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+</head>
+<body>
+    <section class="portfolio">
+        <div class="container">
+            <a class="page-link" href="{% url 'index' %}">
+                <span><img src="{% static '/img/about/arrows.svg' %}" alt=""></span> <p>Back to home</p>
+            </a>
+            <div class="value-proposition">
+                <p>
+                    I help companies and individuals to design websites that convey credibility and thus generate more sales. 
+                </p>
+            </div>
+
+            <div class="projects">
+                {% for project in my_projects %}
+                <div class="project"> 
+                    <h3 class="title">{{project.title}}</h3>
+                    <img class="project-img" src="{{project.project_image.url}}" alt="">
+                    <a class="detail-link" href="{{project.get_absolute_url}}"><button>View project<span>>></span></button></a>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="buttons">
+                <a href="{% url 'quotation' %}"><button>Get a quotation <span>>></span></button></a>
+                <a href="{% url 'index' %}"><button>Back to home<span>>></span></button></a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
