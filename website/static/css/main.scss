@@ -106,6 +106,14 @@ img {
     border-bottom: 1px solid $white;
     border-radius: 0;
     padding: 12px 0;
+
+    &:hover {
+        padding: 12px 35px;
+        border-radius: $border-radius;
+        border-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .sub-heading {
