@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("MY-SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['alphonse.live', 'www.alphonse.live', '127.0.0.1']
+ALLOWED_HOSTS = ['siboalphonse', 'www.siboalphonse.com', '127.0.0.1']
 
 #   EMAIL BACKEND
 
