@@ -96,7 +96,9 @@ input[type=submit] {
 img {
   width: 100%;
 }
-
+.my-work {
+  text-decoration: underline;
+}
 .btn-special {
   border: 0;
   border-bottom: 1px solid rgb(212, 212, 212);
